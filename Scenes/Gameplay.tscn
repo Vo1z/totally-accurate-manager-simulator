@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d2ghxuc7gvlwp"]
+[gd_scene load_steps=23 format=3 uid="uid://d2ghxuc7gvlwp"]
 
 [ext_resource type="Texture2D" uid="uid://bxapihslnlj1g" path="res://OfficeArt/floor.png" id="1_u1bpu"]
 [ext_resource type="PackedScene" uid="uid://cd8rswp2pwwyw" path="res://Scenes/Envoronment/Table.tscn" id="2_a64fs"]
@@ -20,2380 +20,2388 @@
 [ext_resource type="Texture2D" uid="uid://dltfecjw0ak1d" path="res://OfficeArt/trashbeen_green.png" id="18_epfj1"]
 [ext_resource type="Texture2D" uid="uid://jdudps8kfipp" path="res://OfficeArt/trashbeen_red.png" id="19_5l6yb"]
 [ext_resource type="PackedScene" uid="uid://bct3kqqns55qs" path="res://Scenes/NPC/Worker.tscn" id="20_oxbjs"]
+[ext_resource type="PackedScene" uid="uid://yd7sxl4u0eec" path="res://Scenes/Envoronment/ResourcePoint.tscn" id="21_jcyhk"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qjcge"]
-vertices = PackedVector2Array(1545, 638, 1612, 634, 1608, 718, 1545, 717, 1541, 929, 1614, 925, 1611, 1010, 1546, 1012, 268, 373, 100, 376, 104, 314, 218, 343, 1034, 311, 822, 313, 825, 270, 1027, 270, 763, 634, 831, 635, 832, 720, 759, 716, 625, 693, 1172, 928, 1240, 927, 1236, 1009, 1167, 1010, 1170, 1073, 1038, 1073, 1037, 1012, 1037, 928, 1170, 634, 1237, 632, 1241, 720, 1172, 720, 1039, 719, 961, 719, 964, 637, 1034, 632, 1445, 1016, 1366, 1015, 1370, 930, 1447, 931, 1171, 782, 1238, 780, 1238, 866, 1170, 872, 1037, 868, 1800, 463, 1795, 220, 1915, 221, 1919, 1069, 1811, 573, 830, 928, 831, 1008, 766, 1007, 767, 926, 1821, 865, 1741, 864, 1744, 786, 1820, 786, 1448, 869, 1368, 867, 1366, 786, 1447, 786, 1541, 863, 962, 1014, 961, 927, 1210, 363, 1033, 364, 472, 789, 569, 787, 569, 1074, 267, 1070, 266, 787, 364, 786, 469, 693, 363, 688, 1038, 244, 1742, 241, 1740, 367, 1348, 364, 765, 1075, 620, 1075, 763, 867, 1450, 722, 1368, 721, 1370, 638, 1446, 636, 210, 693, 213, 1113, -4, 1112, -7, 551, 213, 545, 215, 620, 269, 617, 1820, 720, 1739, 719, 1741, 636, 1816, 636, -5, 309, -6, 221, 217, 220, 266, 341, 771, 468, 1544, 1068, 1446, 1064, 266, 219, 770, 216, 763, 571, 1817, 1069, 1817, 1012, 1818, 929, 1543, 783, 1609, 784, 1609, 862, 1544, 576, 1445, 574, 760, 780, 830, 780, 832, 862, 1744, 1008, 1746, 930, 1213, 464, 1351, 466, 962, 866, 959, 783, 1036, 776, 1034, 573, 1174, 578)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(24, 25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33), PackedInt32Array(33, 34, 35, 36, 29), PackedInt32Array(37, 38, 39, 40, 7), PackedInt32Array(41, 42, 43, 44, 45), PackedInt32Array(46, 47, 48, 49, 50), PackedInt32Array(51, 52, 53, 54), PackedInt32Array(55, 56, 57, 58), PackedInt32Array(59, 60, 61, 62, 63), PackedInt32Array(64, 65, 28, 27), PackedInt32Array(66, 67, 12), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(68, 71, 72, 73), PackedInt32Array(74, 68, 73, 75), PackedInt32Array(15, 76, 77, 78, 79, 12), PackedInt32Array(44, 21, 24, 28, 45), PackedInt32Array(54, 53, 80, 81, 20, 82), PackedInt32Array(3, 83, 84, 85, 86, 0), PackedInt32Array(87, 88, 89, 90), PackedInt32Array(87, 90, 91, 92), PackedInt32Array(75, 87, 92, 93), PackedInt32Array(94, 95, 96, 97), PackedInt32Array(98, 99, 100, 10), PackedInt32Array(10, 100, 11), PackedInt32Array(8, 11, 101, 102), PackedInt32Array(7, 103, 104, 37), PackedInt32Array(4, 7, 40, 59), PackedInt32Array(63, 4, 59), PackedInt32Array(105, 106, 102, 101), PackedInt32Array(20, 74, 75, 93, 8, 102, 107), PackedInt32Array(49, 108, 109, 110, 55), PackedInt32Array(111, 112, 113, 63, 62), PackedInt32Array(111, 62, 83, 3), PackedInt32Array(114, 0, 86, 115), PackedInt32Array(116, 117, 118, 82), PackedInt32Array(116, 82, 20), PackedInt32Array(19, 116, 20), PackedInt32Array(109, 119, 120, 110), PackedInt32Array(66, 12, 79), PackedInt32Array(121, 66, 79, 122), PackedInt32Array(45, 123, 124, 125, 41), PackedInt32Array(32, 41, 125, 33), PackedInt32Array(29, 36, 126, 127), PackedInt32Array(107, 16, 20), PackedInt32Array(126, 107, 102, 121), PackedInt32Array(115, 127, 126, 121, 122), PackedInt32Array(114, 115, 122, 46, 50), PackedInt32Array(97, 50, 49), PackedInt32Array(94, 97, 49), PackedInt32Array(58, 94, 49, 55)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(266, 219, 266, 341, 218, 343, 217, 220, -6, 221, -5, 309, 104, 314, 100, 376, 268, 373, 269, 617, 215, 620, 213, 545, -7, 551, -4, 1112, 213, 1113, 210, 693, 363, 688, 364, 786, 266, 787, 267, 1070, 569, 1074, 569, 787, 472, 789, 469, 693, 625, 693, 620, 1075, 765, 1075, 766, 1007, 831, 1008, 830, 928, 767, 926, 763, 867, 832, 862, 830, 780, 760, 780, 759, 716, 832, 720, 831, 635, 763, 634, 763, 571, 1034, 573, 1034, 632, 964, 637, 961, 719, 1039, 719, 1036, 776, 959, 783, 962, 866, 1037, 868, 1037, 928, 961, 927, 962, 1014, 1037, 1012, 1038, 1073, 1170, 1073, 1167, 1010, 1236, 1009, 1240, 927, 1172, 928, 1170, 872, 1238, 866, 1238, 780, 1171, 782, 1172, 720, 1241, 720, 1237, 632, 1170, 634, 1174, 578, 1445, 574, 1446, 636, 1370, 638, 1368, 721, 1450, 722, 1447, 786, 1366, 786, 1368, 867, 1448, 869, 1447, 931, 1370, 930, 1366, 1015, 1445, 1016, 1446, 1064, 1544, 1068, 1546, 1012, 1611, 1010, 1614, 925, 1541, 929, 1541, 863, 1609, 862, 1609, 784, 1543, 783, 1545, 717, 1608, 718, 1612, 634, 1545, 638, 1544, 576, 1811, 573, 1816, 636, 1741, 636, 1739, 719, 1820, 720, 1820, 786, 1744, 786, 1741, 864, 1821, 865, 1818, 929, 1746, 930, 1744, 1008, 1817, 1012, 1817, 1069, 1919, 1069, 1915, 221, 1795, 220, 1800, 463, 1351, 466, 1348, 364, 1740, 367, 1742, 241, 1038, 244, 1027, 270, 825, 270, 822, 313, 1034, 311, 1033, 364, 1210, 363, 1213, 464, 771, 468, 770, 216)])
+vertices = PackedVector2Array(1588, 1006, 1591, 1058, 1480, 1055, 1481, 1007, 1915, 221, 1917, 1065, 1868, 1061, 1869, 1006, 268, 373, 100, 376, 104, 314, 218, 343, 1592, 773, 1651, 774, 1658, 860, 1592, 860, 1484, 772, 831, 635, 832, 720, 759, 716, 763, 634, 1060, 859, 983, 857, 982, 769, 1063, 773, 1193, 861, 1791, 859, 1786, 772, 1870, 772, 1866, 860, 1206, 1007, 1200, 1058, 1060, 1055, 1064, 1003, 1197, 915, 1791, 1004, 1788, 916, 1870, 916, 1867, 718, 1865, 630, 1866, 576, 1800, 463, 1795, 220, 830, 928, 831, 1008, 766, 1007, 767, 926, 472, 789, 569, 787, 569, 1074, 267, 1070, 266, 787, 364, 786, 469, 693, 363, 688, 765, 1075, 620, 1075, 625, 693, 763, 867, 980, 997, 986, 909, 1060, 915, 210, 693, 213, 1113, -4, 1112, -7, 551, 213, 545, 215, 620, 269, 617, 1787, 716, 1790, 627, 1330, 465, 1587, 578, 1479, 573, -5, 309, -6, 221, 217, 220, 266, 341, 724, 460, 1588, 632, 1653, 633, 1656, 717, 1587, 719, 1486, 721, 992, 312, 822, 313, 822, 275, 976, 276, 1737, 285, 1191, 368, 996, 359, 1327, 363, 1737, 365, 1189, 467, 1197, 579, 1402, 1001, 1404, 914, 1481, 916, 266, 219, 722, 215, 1195, 767, 1263, 775, 1268, 855, 1267, 918, 1265, 999, 1591, 915, 1654, 915, 1656, 1000, 1485, 863, 1404, 859, 1405, 773, 760, 780, 830, 780, 832, 862, 763, 571, 1065, 576, 1267, 714, 1197, 723, 1058, 719, 983, 714, 982, 630, 1066, 626, 1197, 627, 1266, 631, 1408, 712, 1408, 632, 1483, 628)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(30, 31, 32, 33, 34), PackedInt32Array(35, 36, 37, 7), PackedInt32Array(4, 7, 37), PackedInt32Array(4, 37, 29, 28), PackedInt32Array(4, 28, 38, 39, 40), PackedInt32Array(41, 42, 4, 40), PackedInt32Array(43, 44, 45, 46), PackedInt32Array(47, 48, 49, 50), PackedInt32Array(47, 50, 51, 52), PackedInt32Array(53, 47, 52, 54), PackedInt32Array(46, 45, 55, 56, 57, 58), PackedInt32Array(59, 60, 61, 33), PackedInt32Array(62, 63, 64, 65), PackedInt32Array(62, 65, 66, 67), PackedInt32Array(54, 62, 67, 68), PackedInt32Array(38, 69, 70, 39), PackedInt32Array(71, 41, 40, 72, 73), PackedInt32Array(74, 75, 76, 10), PackedInt32Array(10, 76, 11), PackedInt32Array(8, 11, 77, 78), PackedInt32Array(79, 80, 81, 82, 83), PackedInt32Array(84, 85, 86, 87, 88), PackedInt32Array(89, 90, 84, 88, 91), PackedInt32Array(88, 92, 91), PackedInt32Array(93, 89, 91, 71, 94), PackedInt32Array(3, 95, 96, 97, 0), PackedInt32Array(98, 99, 78, 77), PackedInt32Array(53, 54, 68, 8, 78, 57), PackedInt32Array(100, 101, 102, 25, 24), PackedInt32Array(34, 103, 104, 30), PackedInt32Array(25, 34, 33, 61, 21), PackedInt32Array(105, 106, 107, 0, 97), PackedInt32Array(105, 97, 108, 15), PackedInt32Array(108, 109, 110, 16, 15), PackedInt32Array(82, 12, 16, 83), PackedInt32Array(111, 112, 113, 58), PackedInt32Array(111, 58, 57), PackedInt32Array(19, 111, 57, 78), PackedInt32Array(20, 19, 78, 114), PackedInt32Array(114, 78, 93, 115), PackedInt32Array(116, 117, 118, 119, 120, 121, 122, 123), PackedInt32Array(100, 24, 118, 117), PackedInt32Array(83, 124, 125, 126, 79), PackedInt32Array(72, 79, 126, 73), PackedInt32Array(71, 73, 94), PackedInt32Array(121, 115, 93, 94, 122)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(266, 219, 266, 341, 218, 343, 217, 220, -6, 221, -5, 309, 104, 314, 100, 376, 268, 373, 269, 617, 215, 620, 213, 545, -7, 551, -4, 1112, 213, 1113, 210, 693, 363, 688, 364, 786, 266, 787, 267, 1070, 569, 1074, 569, 787, 472, 789, 469, 693, 625, 693, 620, 1075, 765, 1075, 766, 1007, 831, 1008, 830, 928, 767, 926, 763, 867, 832, 862, 830, 780, 760, 780, 759, 716, 832, 720, 831, 635, 763, 634, 763, 571, 1065, 576, 1066, 626, 982, 630, 983, 714, 1058, 719, 1063, 773, 982, 769, 983, 857, 1060, 859, 1060, 915, 986, 909, 980, 997, 1064, 1003, 1060, 1055, 1200, 1058, 1206, 1007, 1265, 999, 1267, 918, 1197, 915, 1193, 861, 1268, 855, 1263, 775, 1195, 767, 1197, 723, 1267, 714, 1266, 631, 1197, 627, 1197, 579, 1479, 573, 1483, 628, 1408, 632, 1408, 712, 1486, 721, 1484, 772, 1405, 773, 1404, 859, 1485, 863, 1481, 916, 1404, 914, 1402, 1001, 1481, 1007, 1480, 1055, 1591, 1058, 1588, 1006, 1656, 1000, 1654, 915, 1591, 915, 1592, 860, 1658, 860, 1651, 774, 1592, 773, 1587, 719, 1656, 717, 1653, 633, 1588, 632, 1587, 578, 1866, 576, 1865, 630, 1790, 627, 1787, 716, 1867, 718, 1870, 772, 1786, 772, 1791, 859, 1866, 860, 1870, 916, 1788, 916, 1791, 1004, 1869, 1006, 1868, 1061, 1917, 1065, 1915, 221, 1795, 220, 1800, 463, 1330, 465, 1327, 363, 1737, 365, 1737, 285, 976, 276, 822, 275, 822, 313, 992, 312, 996, 359, 1191, 368, 1189, 467, 724, 460, 722, 215)])
 
-[node name="Node2D" type="Node2D"]
+[node name="Gameplay" type="Node2D"]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(18, -4)
 navigation_polygon = SubResource("NavigationPolygon_qjcge")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -3)
 anchor_mode = 0
 
-[node name="Floor" type="Node2D" parent="."]
+[node name="SortingParent" type="Node2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(1.03856, 0.982781)
+
+[node name="Floor" type="Node2D" parent="SortingParent"]
+z_index = -2
 position = Vector2(4, 0)
 scale = Vector2(1.56197, 1.726)
 
-[node name="Floor" type="Sprite2D" parent="Floor"]
+[node name="Floor" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor2" type="Sprite2D" parent="Floor"]
+[node name="Floor2" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor3" type="Sprite2D" parent="Floor"]
+[node name="Floor3" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor4" type="Sprite2D" parent="Floor"]
+[node name="Floor4" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor5" type="Sprite2D" parent="Floor"]
+[node name="Floor5" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor6" type="Sprite2D" parent="Floor"]
+[node name="Floor6" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor7" type="Sprite2D" parent="Floor"]
+[node name="Floor7" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor8" type="Sprite2D" parent="Floor"]
+[node name="Floor8" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor9" type="Sprite2D" parent="Floor"]
+[node name="Floor9" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor10" type="Sprite2D" parent="Floor"]
+[node name="Floor10" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor11" type="Sprite2D" parent="Floor"]
+[node name="Floor11" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor12" type="Sprite2D" parent="Floor"]
+[node name="Floor12" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor13" type="Sprite2D" parent="Floor"]
+[node name="Floor13" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor14" type="Sprite2D" parent="Floor"]
+[node name="Floor14" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 632)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor15" type="Sprite2D" parent="Floor"]
+[node name="Floor15" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor16" type="Sprite2D" parent="Floor"]
+[node name="Floor16" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor17" type="Sprite2D" parent="Floor"]
+[node name="Floor17" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor18" type="Sprite2D" parent="Floor"]
+[node name="Floor18" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor19" type="Sprite2D" parent="Floor"]
+[node name="Floor19" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor20" type="Sprite2D" parent="Floor"]
+[node name="Floor20" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor21" type="Sprite2D" parent="Floor"]
+[node name="Floor21" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor22" type="Sprite2D" parent="Floor"]
+[node name="Floor22" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor23" type="Sprite2D" parent="Floor"]
+[node name="Floor23" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor24" type="Sprite2D" parent="Floor"]
+[node name="Floor24" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor25" type="Sprite2D" parent="Floor"]
+[node name="Floor25" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor26" type="Sprite2D" parent="Floor"]
+[node name="Floor26" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor27" type="Sprite2D" parent="Floor"]
+[node name="Floor27" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor28" type="Sprite2D" parent="Floor"]
+[node name="Floor28" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 602)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor29" type="Sprite2D" parent="Floor"]
+[node name="Floor29" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor30" type="Sprite2D" parent="Floor"]
+[node name="Floor30" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor31" type="Sprite2D" parent="Floor"]
+[node name="Floor31" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor32" type="Sprite2D" parent="Floor"]
+[node name="Floor32" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor33" type="Sprite2D" parent="Floor"]
+[node name="Floor33" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor34" type="Sprite2D" parent="Floor"]
+[node name="Floor34" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor35" type="Sprite2D" parent="Floor"]
+[node name="Floor35" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor36" type="Sprite2D" parent="Floor"]
+[node name="Floor36" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor37" type="Sprite2D" parent="Floor"]
+[node name="Floor37" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor38" type="Sprite2D" parent="Floor"]
+[node name="Floor38" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor39" type="Sprite2D" parent="Floor"]
+[node name="Floor39" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor40" type="Sprite2D" parent="Floor"]
+[node name="Floor40" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor41" type="Sprite2D" parent="Floor"]
+[node name="Floor41" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor42" type="Sprite2D" parent="Floor"]
+[node name="Floor42" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 572)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor43" type="Sprite2D" parent="Floor"]
+[node name="Floor43" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor44" type="Sprite2D" parent="Floor"]
+[node name="Floor44" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor45" type="Sprite2D" parent="Floor"]
+[node name="Floor45" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor46" type="Sprite2D" parent="Floor"]
+[node name="Floor46" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor47" type="Sprite2D" parent="Floor"]
+[node name="Floor47" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor48" type="Sprite2D" parent="Floor"]
+[node name="Floor48" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor49" type="Sprite2D" parent="Floor"]
+[node name="Floor49" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor50" type="Sprite2D" parent="Floor"]
+[node name="Floor50" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor51" type="Sprite2D" parent="Floor"]
+[node name="Floor51" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor52" type="Sprite2D" parent="Floor"]
+[node name="Floor52" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor53" type="Sprite2D" parent="Floor"]
+[node name="Floor53" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor54" type="Sprite2D" parent="Floor"]
+[node name="Floor54" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor55" type="Sprite2D" parent="Floor"]
+[node name="Floor55" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor56" type="Sprite2D" parent="Floor"]
+[node name="Floor56" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 542)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor57" type="Sprite2D" parent="Floor"]
+[node name="Floor57" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor58" type="Sprite2D" parent="Floor"]
+[node name="Floor58" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor59" type="Sprite2D" parent="Floor"]
+[node name="Floor59" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor60" type="Sprite2D" parent="Floor"]
+[node name="Floor60" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor61" type="Sprite2D" parent="Floor"]
+[node name="Floor61" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor62" type="Sprite2D" parent="Floor"]
+[node name="Floor62" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor63" type="Sprite2D" parent="Floor"]
+[node name="Floor63" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor64" type="Sprite2D" parent="Floor"]
+[node name="Floor64" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor65" type="Sprite2D" parent="Floor"]
+[node name="Floor65" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor66" type="Sprite2D" parent="Floor"]
+[node name="Floor66" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor67" type="Sprite2D" parent="Floor"]
+[node name="Floor67" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor68" type="Sprite2D" parent="Floor"]
+[node name="Floor68" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor69" type="Sprite2D" parent="Floor"]
+[node name="Floor69" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor70" type="Sprite2D" parent="Floor"]
+[node name="Floor70" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 512)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor71" type="Sprite2D" parent="Floor"]
+[node name="Floor71" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor72" type="Sprite2D" parent="Floor"]
+[node name="Floor72" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor73" type="Sprite2D" parent="Floor"]
+[node name="Floor73" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor74" type="Sprite2D" parent="Floor"]
+[node name="Floor74" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor75" type="Sprite2D" parent="Floor"]
+[node name="Floor75" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor76" type="Sprite2D" parent="Floor"]
+[node name="Floor76" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor77" type="Sprite2D" parent="Floor"]
+[node name="Floor77" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor78" type="Sprite2D" parent="Floor"]
+[node name="Floor78" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor79" type="Sprite2D" parent="Floor"]
+[node name="Floor79" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor80" type="Sprite2D" parent="Floor"]
+[node name="Floor80" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor81" type="Sprite2D" parent="Floor"]
+[node name="Floor81" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor82" type="Sprite2D" parent="Floor"]
+[node name="Floor82" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor83" type="Sprite2D" parent="Floor"]
+[node name="Floor83" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor84" type="Sprite2D" parent="Floor"]
+[node name="Floor84" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 482)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor85" type="Sprite2D" parent="Floor"]
+[node name="Floor85" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor86" type="Sprite2D" parent="Floor"]
+[node name="Floor86" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor87" type="Sprite2D" parent="Floor"]
+[node name="Floor87" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor88" type="Sprite2D" parent="Floor"]
+[node name="Floor88" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor89" type="Sprite2D" parent="Floor"]
+[node name="Floor89" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor90" type="Sprite2D" parent="Floor"]
+[node name="Floor90" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor91" type="Sprite2D" parent="Floor"]
+[node name="Floor91" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor92" type="Sprite2D" parent="Floor"]
+[node name="Floor92" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor93" type="Sprite2D" parent="Floor"]
+[node name="Floor93" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor94" type="Sprite2D" parent="Floor"]
+[node name="Floor94" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor95" type="Sprite2D" parent="Floor"]
+[node name="Floor95" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor96" type="Sprite2D" parent="Floor"]
+[node name="Floor96" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor97" type="Sprite2D" parent="Floor"]
+[node name="Floor97" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor98" type="Sprite2D" parent="Floor"]
+[node name="Floor98" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 452)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor99" type="Sprite2D" parent="Floor"]
+[node name="Floor99" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor100" type="Sprite2D" parent="Floor"]
+[node name="Floor100" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor101" type="Sprite2D" parent="Floor"]
+[node name="Floor101" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor102" type="Sprite2D" parent="Floor"]
+[node name="Floor102" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor103" type="Sprite2D" parent="Floor"]
+[node name="Floor103" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor104" type="Sprite2D" parent="Floor"]
+[node name="Floor104" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor105" type="Sprite2D" parent="Floor"]
+[node name="Floor105" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor106" type="Sprite2D" parent="Floor"]
+[node name="Floor106" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor107" type="Sprite2D" parent="Floor"]
+[node name="Floor107" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor108" type="Sprite2D" parent="Floor"]
+[node name="Floor108" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor109" type="Sprite2D" parent="Floor"]
+[node name="Floor109" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor110" type="Sprite2D" parent="Floor"]
+[node name="Floor110" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor111" type="Sprite2D" parent="Floor"]
+[node name="Floor111" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor112" type="Sprite2D" parent="Floor"]
+[node name="Floor112" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 422)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor113" type="Sprite2D" parent="Floor"]
+[node name="Floor113" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor114" type="Sprite2D" parent="Floor"]
+[node name="Floor114" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor115" type="Sprite2D" parent="Floor"]
+[node name="Floor115" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor116" type="Sprite2D" parent="Floor"]
+[node name="Floor116" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor117" type="Sprite2D" parent="Floor"]
+[node name="Floor117" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor118" type="Sprite2D" parent="Floor"]
+[node name="Floor118" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor119" type="Sprite2D" parent="Floor"]
+[node name="Floor119" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor120" type="Sprite2D" parent="Floor"]
+[node name="Floor120" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor121" type="Sprite2D" parent="Floor"]
+[node name="Floor121" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor122" type="Sprite2D" parent="Floor"]
+[node name="Floor122" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor123" type="Sprite2D" parent="Floor"]
+[node name="Floor123" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor124" type="Sprite2D" parent="Floor"]
+[node name="Floor124" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor125" type="Sprite2D" parent="Floor"]
+[node name="Floor125" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor126" type="Sprite2D" parent="Floor"]
+[node name="Floor126" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 392)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor127" type="Sprite2D" parent="Floor"]
+[node name="Floor127" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor128" type="Sprite2D" parent="Floor"]
+[node name="Floor128" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor129" type="Sprite2D" parent="Floor"]
+[node name="Floor129" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor130" type="Sprite2D" parent="Floor"]
+[node name="Floor130" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor131" type="Sprite2D" parent="Floor"]
+[node name="Floor131" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor132" type="Sprite2D" parent="Floor"]
+[node name="Floor132" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor133" type="Sprite2D" parent="Floor"]
+[node name="Floor133" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor134" type="Sprite2D" parent="Floor"]
+[node name="Floor134" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor135" type="Sprite2D" parent="Floor"]
+[node name="Floor135" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor136" type="Sprite2D" parent="Floor"]
+[node name="Floor136" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor137" type="Sprite2D" parent="Floor"]
+[node name="Floor137" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor138" type="Sprite2D" parent="Floor"]
+[node name="Floor138" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor139" type="Sprite2D" parent="Floor"]
+[node name="Floor139" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor140" type="Sprite2D" parent="Floor"]
+[node name="Floor140" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 362)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor141" type="Sprite2D" parent="Floor"]
+[node name="Floor141" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor142" type="Sprite2D" parent="Floor"]
+[node name="Floor142" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor143" type="Sprite2D" parent="Floor"]
+[node name="Floor143" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor144" type="Sprite2D" parent="Floor"]
+[node name="Floor144" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor145" type="Sprite2D" parent="Floor"]
+[node name="Floor145" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor146" type="Sprite2D" parent="Floor"]
+[node name="Floor146" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor147" type="Sprite2D" parent="Floor"]
+[node name="Floor147" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor148" type="Sprite2D" parent="Floor"]
+[node name="Floor148" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor149" type="Sprite2D" parent="Floor"]
+[node name="Floor149" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor150" type="Sprite2D" parent="Floor"]
+[node name="Floor150" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor151" type="Sprite2D" parent="Floor"]
+[node name="Floor151" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor152" type="Sprite2D" parent="Floor"]
+[node name="Floor152" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor153" type="Sprite2D" parent="Floor"]
+[node name="Floor153" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor154" type="Sprite2D" parent="Floor"]
+[node name="Floor154" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 332)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor155" type="Sprite2D" parent="Floor"]
+[node name="Floor155" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor156" type="Sprite2D" parent="Floor"]
+[node name="Floor156" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor157" type="Sprite2D" parent="Floor"]
+[node name="Floor157" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor158" type="Sprite2D" parent="Floor"]
+[node name="Floor158" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor159" type="Sprite2D" parent="Floor"]
+[node name="Floor159" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor160" type="Sprite2D" parent="Floor"]
+[node name="Floor160" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor161" type="Sprite2D" parent="Floor"]
+[node name="Floor161" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor162" type="Sprite2D" parent="Floor"]
+[node name="Floor162" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor163" type="Sprite2D" parent="Floor"]
+[node name="Floor163" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor164" type="Sprite2D" parent="Floor"]
+[node name="Floor164" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor165" type="Sprite2D" parent="Floor"]
+[node name="Floor165" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor166" type="Sprite2D" parent="Floor"]
+[node name="Floor166" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor167" type="Sprite2D" parent="Floor"]
+[node name="Floor167" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor168" type="Sprite2D" parent="Floor"]
+[node name="Floor168" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 302)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor169" type="Sprite2D" parent="Floor"]
+[node name="Floor169" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor170" type="Sprite2D" parent="Floor"]
+[node name="Floor170" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor171" type="Sprite2D" parent="Floor"]
+[node name="Floor171" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor172" type="Sprite2D" parent="Floor"]
+[node name="Floor172" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor173" type="Sprite2D" parent="Floor"]
+[node name="Floor173" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor174" type="Sprite2D" parent="Floor"]
+[node name="Floor174" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor175" type="Sprite2D" parent="Floor"]
+[node name="Floor175" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor176" type="Sprite2D" parent="Floor"]
+[node name="Floor176" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor177" type="Sprite2D" parent="Floor"]
+[node name="Floor177" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor178" type="Sprite2D" parent="Floor"]
+[node name="Floor178" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor179" type="Sprite2D" parent="Floor"]
+[node name="Floor179" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor180" type="Sprite2D" parent="Floor"]
+[node name="Floor180" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor181" type="Sprite2D" parent="Floor"]
+[node name="Floor181" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor182" type="Sprite2D" parent="Floor"]
+[node name="Floor182" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 272)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor183" type="Sprite2D" parent="Floor"]
+[node name="Floor183" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor184" type="Sprite2D" parent="Floor"]
+[node name="Floor184" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor185" type="Sprite2D" parent="Floor"]
+[node name="Floor185" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor186" type="Sprite2D" parent="Floor"]
+[node name="Floor186" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor187" type="Sprite2D" parent="Floor"]
+[node name="Floor187" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor188" type="Sprite2D" parent="Floor"]
+[node name="Floor188" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor189" type="Sprite2D" parent="Floor"]
+[node name="Floor189" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor190" type="Sprite2D" parent="Floor"]
+[node name="Floor190" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor191" type="Sprite2D" parent="Floor"]
+[node name="Floor191" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor192" type="Sprite2D" parent="Floor"]
+[node name="Floor192" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor193" type="Sprite2D" parent="Floor"]
+[node name="Floor193" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor194" type="Sprite2D" parent="Floor"]
+[node name="Floor194" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor195" type="Sprite2D" parent="Floor"]
+[node name="Floor195" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor196" type="Sprite2D" parent="Floor"]
+[node name="Floor196" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 242)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor197" type="Sprite2D" parent="Floor"]
+[node name="Floor197" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor198" type="Sprite2D" parent="Floor"]
+[node name="Floor198" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor199" type="Sprite2D" parent="Floor"]
+[node name="Floor199" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor200" type="Sprite2D" parent="Floor"]
+[node name="Floor200" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor201" type="Sprite2D" parent="Floor"]
+[node name="Floor201" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor202" type="Sprite2D" parent="Floor"]
+[node name="Floor202" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor203" type="Sprite2D" parent="Floor"]
+[node name="Floor203" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor204" type="Sprite2D" parent="Floor"]
+[node name="Floor204" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor205" type="Sprite2D" parent="Floor"]
+[node name="Floor205" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor206" type="Sprite2D" parent="Floor"]
+[node name="Floor206" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor207" type="Sprite2D" parent="Floor"]
+[node name="Floor207" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor208" type="Sprite2D" parent="Floor"]
+[node name="Floor208" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor209" type="Sprite2D" parent="Floor"]
+[node name="Floor209" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor210" type="Sprite2D" parent="Floor"]
+[node name="Floor210" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 213)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor211" type="Sprite2D" parent="Floor"]
+[node name="Floor211" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor212" type="Sprite2D" parent="Floor"]
+[node name="Floor212" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor213" type="Sprite2D" parent="Floor"]
+[node name="Floor213" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor214" type="Sprite2D" parent="Floor"]
+[node name="Floor214" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor215" type="Sprite2D" parent="Floor"]
+[node name="Floor215" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor216" type="Sprite2D" parent="Floor"]
+[node name="Floor216" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor217" type="Sprite2D" parent="Floor"]
+[node name="Floor217" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor218" type="Sprite2D" parent="Floor"]
+[node name="Floor218" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor219" type="Sprite2D" parent="Floor"]
+[node name="Floor219" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor220" type="Sprite2D" parent="Floor"]
+[node name="Floor220" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor221" type="Sprite2D" parent="Floor"]
+[node name="Floor221" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor222" type="Sprite2D" parent="Floor"]
+[node name="Floor222" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor223" type="Sprite2D" parent="Floor"]
+[node name="Floor223" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor224" type="Sprite2D" parent="Floor"]
+[node name="Floor224" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 183)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor225" type="Sprite2D" parent="Floor"]
+[node name="Floor225" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor226" type="Sprite2D" parent="Floor"]
+[node name="Floor226" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor227" type="Sprite2D" parent="Floor"]
+[node name="Floor227" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor228" type="Sprite2D" parent="Floor"]
+[node name="Floor228" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor229" type="Sprite2D" parent="Floor"]
+[node name="Floor229" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor230" type="Sprite2D" parent="Floor"]
+[node name="Floor230" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor231" type="Sprite2D" parent="Floor"]
+[node name="Floor231" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor232" type="Sprite2D" parent="Floor"]
+[node name="Floor232" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor233" type="Sprite2D" parent="Floor"]
+[node name="Floor233" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor234" type="Sprite2D" parent="Floor"]
+[node name="Floor234" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor235" type="Sprite2D" parent="Floor"]
+[node name="Floor235" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor236" type="Sprite2D" parent="Floor"]
+[node name="Floor236" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor237" type="Sprite2D" parent="Floor"]
+[node name="Floor237" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor238" type="Sprite2D" parent="Floor"]
+[node name="Floor238" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 153)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor239" type="Sprite2D" parent="Floor"]
+[node name="Floor239" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor240" type="Sprite2D" parent="Floor"]
+[node name="Floor240" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor241" type="Sprite2D" parent="Floor"]
+[node name="Floor241" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor242" type="Sprite2D" parent="Floor"]
+[node name="Floor242" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor243" type="Sprite2D" parent="Floor"]
+[node name="Floor243" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor244" type="Sprite2D" parent="Floor"]
+[node name="Floor244" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor245" type="Sprite2D" parent="Floor"]
+[node name="Floor245" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor246" type="Sprite2D" parent="Floor"]
+[node name="Floor246" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor247" type="Sprite2D" parent="Floor"]
+[node name="Floor247" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor248" type="Sprite2D" parent="Floor"]
+[node name="Floor248" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor249" type="Sprite2D" parent="Floor"]
+[node name="Floor249" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor250" type="Sprite2D" parent="Floor"]
+[node name="Floor250" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor251" type="Sprite2D" parent="Floor"]
+[node name="Floor251" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor252" type="Sprite2D" parent="Floor"]
+[node name="Floor252" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 123)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor253" type="Sprite2D" parent="Floor"]
+[node name="Floor253" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor254" type="Sprite2D" parent="Floor"]
+[node name="Floor254" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor255" type="Sprite2D" parent="Floor"]
+[node name="Floor255" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 92.9999)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor256" type="Sprite2D" parent="Floor"]
+[node name="Floor256" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 92.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor257" type="Sprite2D" parent="Floor"]
+[node name="Floor257" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 92.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor258" type="Sprite2D" parent="Floor"]
+[node name="Floor258" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 92.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor259" type="Sprite2D" parent="Floor"]
+[node name="Floor259" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 92.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor260" type="Sprite2D" parent="Floor"]
+[node name="Floor260" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor261" type="Sprite2D" parent="Floor"]
+[node name="Floor261" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor262" type="Sprite2D" parent="Floor"]
+[node name="Floor262" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 93.0001)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor263" type="Sprite2D" parent="Floor"]
+[node name="Floor263" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor264" type="Sprite2D" parent="Floor"]
+[node name="Floor264" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor265" type="Sprite2D" parent="Floor"]
+[node name="Floor265" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 93)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor266" type="Sprite2D" parent="Floor"]
+[node name="Floor266" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 93.0001)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor267" type="Sprite2D" parent="Floor"]
+[node name="Floor267" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor268" type="Sprite2D" parent="Floor"]
+[node name="Floor268" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor269" type="Sprite2D" parent="Floor"]
+[node name="Floor269" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 63)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor270" type="Sprite2D" parent="Floor"]
+[node name="Floor270" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 63)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor271" type="Sprite2D" parent="Floor"]
+[node name="Floor271" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 63)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor272" type="Sprite2D" parent="Floor"]
+[node name="Floor272" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 63)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor273" type="Sprite2D" parent="Floor"]
+[node name="Floor273" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 63)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor274" type="Sprite2D" parent="Floor"]
+[node name="Floor274" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor275" type="Sprite2D" parent="Floor"]
+[node name="Floor275" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor276" type="Sprite2D" parent="Floor"]
+[node name="Floor276" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor277" type="Sprite2D" parent="Floor"]
+[node name="Floor277" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor278" type="Sprite2D" parent="Floor"]
+[node name="Floor278" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor279" type="Sprite2D" parent="Floor"]
+[node name="Floor279" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor280" type="Sprite2D" parent="Floor"]
+[node name="Floor280" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 63.0003)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor281" type="Sprite2D" parent="Floor"]
+[node name="Floor281" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor282" type="Sprite2D" parent="Floor"]
+[node name="Floor282" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor283" type="Sprite2D" parent="Floor"]
+[node name="Floor283" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 32.9999)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor284" type="Sprite2D" parent="Floor"]
+[node name="Floor284" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 32.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor285" type="Sprite2D" parent="Floor"]
+[node name="Floor285" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 32.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor286" type="Sprite2D" parent="Floor"]
+[node name="Floor286" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 32.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor287" type="Sprite2D" parent="Floor"]
+[node name="Floor287" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 32.9998)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor288" type="Sprite2D" parent="Floor"]
+[node name="Floor288" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor289" type="Sprite2D" parent="Floor"]
+[node name="Floor289" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor290" type="Sprite2D" parent="Floor"]
+[node name="Floor290" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 33.0001)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor291" type="Sprite2D" parent="Floor"]
+[node name="Floor291" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor292" type="Sprite2D" parent="Floor"]
+[node name="Floor292" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor293" type="Sprite2D" parent="Floor"]
+[node name="Floor293" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 33)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor294" type="Sprite2D" parent="Floor"]
+[node name="Floor294" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 33.0001)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor295" type="Sprite2D" parent="Floor"]
+[node name="Floor295" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(40, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor296" type="Sprite2D" parent="Floor"]
+[node name="Floor296" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(128, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor297" type="Sprite2D" parent="Floor"]
+[node name="Floor297" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(216, 3)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor298" type="Sprite2D" parent="Floor"]
+[node name="Floor298" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(304, 3)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor299" type="Sprite2D" parent="Floor"]
+[node name="Floor299" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(392, 3)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor300" type="Sprite2D" parent="Floor"]
+[node name="Floor300" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(480, 3)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor301" type="Sprite2D" parent="Floor"]
+[node name="Floor301" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(568, 3)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor302" type="Sprite2D" parent="Floor"]
+[node name="Floor302" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(656, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor303" type="Sprite2D" parent="Floor"]
+[node name="Floor303" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(744, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor304" type="Sprite2D" parent="Floor"]
+[node name="Floor304" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(832, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor305" type="Sprite2D" parent="Floor"]
+[node name="Floor305" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(920, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor306" type="Sprite2D" parent="Floor"]
+[node name="Floor306" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1008, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor307" type="Sprite2D" parent="Floor"]
+[node name="Floor307" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1096, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="Floor308" type="Sprite2D" parent="Floor"]
+[node name="Floor308" type="Sprite2D" parent="SortingParent/Floor"]
 z_index = -1
 texture_filter = 1
 position = Vector2(1184, 3.00025)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_u1bpu")
 
-[node name="TablesRow" type="Node2D" parent="."]
+[node name="TablesRow" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
 position = Vector2(738, 624)
 scale = Vector2(0.7, 0.7)
 
-[node name="Table7" parent="TablesRow" instance=ExtResource("2_a64fs")]
+[node name="Table7" parent="SortingParent/TablesRow" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 16)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table8" parent="TablesRow" instance=ExtResource("2_a64fs")]
+[node name="Table8" parent="SortingParent/TablesRow" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 224)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table9" parent="TablesRow" instance=ExtResource("2_a64fs")]
+[node name="Table9" parent="SortingParent/TablesRow" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 432)
 scale = Vector2(1.6, 1.6)
 
-[node name="TableWallt2" type="Sprite2D" parent="TablesRow/Table9"]
+[node name="TableWallt2" type="Sprite2D" parent="SortingParent/TablesRow/Table9"]
 texture_filter = 1
 position = Vector2(-23.7501, 106.875)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6i2y3")
 
-[node name="TablesRow2" type="Node2D" parent="."]
+[node name="TablesRow2" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
 position = Vector2(1145, 624)
 scale = Vector2(0.7, 0.7)
 
-[node name="Table7" parent="TablesRow2" instance=ExtResource("2_a64fs")]
+[node name="Table7" parent="SortingParent/TablesRow2" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 16)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table8" parent="TablesRow2" instance=ExtResource("2_a64fs")]
+[node name="Table8" parent="SortingParent/TablesRow2" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 224)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table9" parent="TablesRow2" instance=ExtResource("2_a64fs")]
+[node name="Table9" parent="SortingParent/TablesRow2" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 432)
 scale = Vector2(1.6, 1.6)
 
-[node name="TableWallt2" type="Sprite2D" parent="TablesRow2/Table9"]
+[node name="TableWallt2" type="Sprite2D" parent="SortingParent/TablesRow2/Table9"]
 texture_filter = 1
 position = Vector2(-23.7501, 106.875)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6i2y3")
 
-[node name="TablesRow3" type="Node2D" parent="."]
+[node name="TablesRow3" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
 position = Vector2(1516, 624)
 scale = Vector2(0.7, 0.7)
 
-[node name="Table7" parent="TablesRow3" instance=ExtResource("2_a64fs")]
+[node name="Table7" parent="SortingParent/TablesRow3" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 16)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table8" parent="TablesRow3" instance=ExtResource("2_a64fs")]
+[node name="Table8" parent="SortingParent/TablesRow3" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 224)
 scale = Vector2(1.6, 1.6)
 
-[node name="Table9" parent="TablesRow3" instance=ExtResource("2_a64fs")]
+[node name="Table9" parent="SortingParent/TablesRow3" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 432)
 scale = Vector2(1.6, 1.6)
 
-[node name="TableWallt2" type="Sprite2D" parent="TablesRow3/Table9"]
+[node name="TableWallt2" type="Sprite2D" parent="SortingParent/TablesRow3/Table9"]
 texture_filter = 1
 position = Vector2(-23.7501, 106.875)
 scale = Vector2(3, 3)
 texture = ExtResource("3_6i2y3")
 
-[node name="LeftRooms" type="Node2D" parent="."]
+[node name="LeftRooms" type="Node2D" parent="SortingParent"]
+z_index = -1
 y_sort_enabled = true
 
-[node name="Wall" type="Sprite2D" parent="LeftRooms"]
+[node name="Wall" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(961, 4.96)
 scale = Vector2(74.3077, 3.1)
 texture = ExtResource("4_fi3vw")
 
-[node name="Wall2" type="Sprite2D" parent="LeftRooms"]
+[node name="Wall2" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(961, 66.96)
 scale = Vector2(74.3077, 3.1)
 texture = ExtResource("4_fi3vw")
 
-[node name="Wall3" type="Sprite2D" parent="LeftRooms"]
+[node name="Wall3" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(961, 128.96)
 scale = Vector2(74.3077, 3.1)
 texture = ExtResource("4_fi3vw")
 
-[node name="Wall4" type="Sprite2D" parent="LeftRooms"]
+[node name="Wall4" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(961, 189.72)
 scale = Vector2(74.3077, 3.1)
 texture = ExtResource("4_fi3vw")
 
-[node name="SideWall8" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall8" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(243, 457)
 scale = Vector2(3, 2.22222)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall9" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall9" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(243, 267)
 scale = Vector2(3, 2.15278)
 texture = ExtResource("7_acr7i")
 
-[node name="WallFrontCut" type="Sprite2D" parent="LeftRooms"]
+[node name="WallFrontCut" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(171, 425)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut2" type="Sprite2D" parent="LeftRooms"]
+[node name="WallFrontCut2" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(71, 425)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut3" type="Sprite2D" parent="LeftRooms"]
+[node name="WallFrontCut3" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-29, 425)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="SideWall7" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall7" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(243, 510)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall10" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall10" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(243, 510)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall3" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall3" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(595, 894)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall2" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall2" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(595, 1014)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(595, 1136)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall4" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall4" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(239, 894)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall5" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall5" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(239, 1014)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall6" type="Sprite2D" parent="LeftRooms"]
+[node name="SideWall6" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(239, 1136)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="WallFront" type="Sprite2D" parent="LeftRooms"]
+[node name="WallFront" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(546, 742)
 scale = Vector2(3, 3)
 texture = ExtResource("9_jmi1a")
 
-[node name="WallFront2" type="Sprite2D" parent="LeftRooms"]
+[node name="WallFront2" type="Sprite2D" parent="SortingParent/LeftRooms"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(289, 742)
@@ -2401,61 +2409,62 @@ rotation = 3.14159
 scale = Vector2(3, -3)
 texture = ExtResource("9_jmi1a")
 
-[node name="Door" type="Node2D" parent="."]
+[node name="Door" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
 position = Vector2(-203, -38)
 scale = Vector2(1.5, 1.5)
 
-[node name="Clock" type="Sprite2D" parent="Door"]
+[node name="Clock" type="Sprite2D" parent="SortingParent/Door"]
 texture_filter = 1
 position = Vector2(539.333, 56)
 scale = Vector2(3.62425, 3.53085)
 texture = ExtResource("6_glq56")
 
-[node name="Door" type="Sprite2D" parent="Door"]
+[node name="Door" type="Sprite2D" parent="SortingParent/Door"]
 texture_filter = 1
 position = Vector2(566, 120.313)
 scale = Vector2(3.375, 3.375)
 texture = ExtResource("5_qtnt3")
 
-[node name="Door2" type="Sprite2D" parent="Door"]
+[node name="Door2" type="Sprite2D" parent="SortingParent/Door"]
 texture_filter = 1
 position = Vector2(512, 120.313)
 rotation = 3.14159
 scale = Vector2(3.375, -3.375)
 texture = ExtResource("5_qtnt3")
 
-[node name="Kitchen" type="Node2D" parent="."]
+[node name="Kitchen" type="Node2D" parent="SortingParent"]
+position = Vector2(-54.8839, 1.01752)
 
-[node name="Table2" type="Sprite2D" parent="Kitchen"]
+[node name="Table2" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(940, 346)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("11_uaftv")
 
-[node name="Sofa" type="Sprite2D" parent="Kitchen"]
+[node name="Sofa" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(941, 246)
 scale = Vector2(5.76667, 5.76667)
 texture = ExtResource("10_2sfx6")
 
-[node name="SideWall12" type="Sprite2D" parent="Kitchen"]
+[node name="SideWall12" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1770, 294)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall11" type="Sprite2D" parent="Kitchen"]
+[node name="SideWall11" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1770, 358)
 scale = Vector2(3, 3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall13" type="Sprite2D" parent="Kitchen"]
+[node name="SideWall13" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(797, 294)
@@ -2463,7 +2472,7 @@ rotation = 3.14159
 scale = Vector2(3, -3)
 texture = ExtResource("7_acr7i")
 
-[node name="SideWall14" type="Sprite2D" parent="Kitchen"]
+[node name="SideWall14" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(797, 358)
@@ -2471,147 +2480,149 @@ rotation = 3.14159
 scale = Vector2(3, -3)
 texture = ExtResource("7_acr7i")
 
-[node name="WallFrontCut4" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut4" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(872, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut5" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut5" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(968, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut6" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut6" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1064, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut7" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut7" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1163, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut11" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut11" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1404, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut8" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut8" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1504, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut9" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut9" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1600, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="WallFrontCut10" type="Sprite2D" parent="Kitchen"]
+[node name="WallFrontCut10" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1696, 418)
 scale = Vector2(3, 3)
 texture = ExtResource("8_pilli")
 
-[node name="TrashbeenRed" type="Sprite2D" parent="Kitchen"]
+[node name="TrashbeenRed" type="Sprite2D" parent="SortingParent/Kitchen"]
 texture_filter = 1
 position = Vector2(1331, 237)
 scale = Vector2(5.18055, 5.18055)
 texture = ExtResource("19_5l6yb")
 
-[node name="Table-tall2" type="Sprite2D" parent="Kitchen"]
+[node name="Table-tall2" type="Sprite2D" parent="SortingParent/Kitchen"]
 texture_filter = 1
 position = Vector2(1652.77, 245)
 scale = Vector2(4.28846, 4.28846)
 texture = ExtResource("12_44rla")
 
-[node name="Table-tall3" type="Sprite2D" parent="Kitchen"]
+[node name="Table-tall3" type="Sprite2D" parent="SortingParent/Kitchen"]
 texture_filter = 1
 position = Vector2(1467, 245)
 scale = Vector2(4.28846, 4.28846)
 texture = ExtResource("12_44rla")
 
-[node name="Cofee" type="Sprite2D" parent="Kitchen"]
+[node name="Cofee" type="Sprite2D" parent="SortingParent/Kitchen"]
 texture_filter = 1
 position = Vector2(1652, 219)
 scale = Vector2(5.34091, 5.34091)
 texture = ExtResource("13_gmjls")
 
-[node name="HrRoom" type="Node2D" parent="."]
+[node name="HrRoom" type="Node2D" parent="SortingParent"]
 
-[node name="VendingMachine" type="Sprite2D" parent="HrRoom"]
+[node name="VendingMachine" type="Sprite2D" parent="SortingParent/HrRoom"]
 texture_filter = 1
 position = Vector2(161, 470.667)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
-[node name="VendingMachine" type="Sprite2D" parent="HrRoom/VendingMachine"]
+[node name="VendingMachine" type="Sprite2D" parent="SortingParent/HrRoom/VendingMachine"]
 texture_filter = 1
 position = Vector2(161, 472)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
-[node name="VendingMachine2" type="Sprite2D" parent="HrRoom"]
+[node name="VendingMachine2" type="Sprite2D" parent="SortingParent/HrRoom"]
 texture_filter = 1
 position = Vector2(20, 472)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
-[node name="VendingMachine" type="Sprite2D" parent="HrRoom/VendingMachine2"]
+[node name="VendingMachine" type="Sprite2D" parent="SortingParent/HrRoom/VendingMachine2"]
 texture_filter = 1
 position = Vector2(161, 472)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
-[node name="ManagerRoom" type="Node2D" parent="."]
+[node name="ManagerRoom" type="Node2D" parent="SortingParent"]
 
-[node name="TrashbeenGreen" type="Sprite2D" parent="ManagerRoom"]
+[node name="TrashbeenGreen" type="Sprite2D" parent="SortingParent/ManagerRoom"]
 texture_filter = 1
 position = Vector2(531, 788)
 scale = Vector2(5.18055, 5.18055)
 texture = ExtResource("18_epfj1")
 
-[node name="Library" type="Node2D" parent="."]
-z_index = -1
+[node name="Library" type="Node2D" parent="SortingParent"]
+y_sort_enabled = true
 
-[node name="Table" type="Sprite2D" parent="Library"]
+[node name="Table" type="Sprite2D" parent="SortingParent/Library"]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(16, 346)
 scale = Vector2(4.25, 4.25)
 texture = ExtResource("11_uaftv")
 
-[node name="BookShelve2" type="Sprite2D" parent="Library"]
+[node name="BookShelve2" type="Sprite2D" parent="SortingParent/Library"]
 texture_filter = 1
 position = Vector2(107, 186)
 scale = Vector2(5.59264, 5.71438)
 texture = ExtResource("15_5wp23")
 
-[node name="Water-cooler" type="Sprite2D" parent="."]
+[node name="Water-cooler" type="Sprite2D" parent="SortingParent"]
 texture_filter = 1
-position = Vector2(1862.69, 221)
+position = Vector2(1794.8, 221.819)
 scale = Vector2(5.62499, 5.62499)
 texture = ExtResource("16_4p64b")
 
-[node name="TrashbeenBlue" type="Sprite2D" parent="."]
+[node name="TrashbeenBlue" type="Sprite2D" parent="SortingParent"]
 texture_filter = 1
 position = Vector2(306, 233)
 scale = Vector2(5.16667, 5.16667)
 texture = ExtResource("17_3xy11")
 
-[node name="Worker" parent="." instance=ExtResource("20_oxbjs")]
+[node name="Worker" parent="SortingParent" instance=ExtResource("20_oxbjs")]
 position = Vector2(772, 671)
+
+[node name="ResourcePoint" parent="." instance=ExtResource("21_jcyhk")]

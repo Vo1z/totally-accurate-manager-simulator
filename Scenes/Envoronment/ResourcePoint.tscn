@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://yd7sxl4u0eec"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/ResourcePoint.cs" id="1_b7yss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxah"]
+size = Vector2(48.1328, 50.6187)
+
+[node name="ResourcePoint" type="Node2D"]
+script = ExtResource("1_b7yss")
+
+[node name="ResourceTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceTrigger"]
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(1.66207, 1.30387)
+shape = SubResource("RectangleShape2D_ygxah")
+
+[connection signal="body_entered" from="ResourceTrigger" to="." method="_on_resource_trigger_body_entered"]
