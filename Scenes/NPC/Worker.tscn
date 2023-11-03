@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://bct3kqqns55qs"]
+[gd_scene load_steps=17 format=3 uid="uid://bct3kqqns55qs"]
 
+[ext_resource type="Script" path="res://Scripts/Worker.cs" id="1_87nvl"]
 [ext_resource type="Texture2D" uid="uid://bvpkhturxvojr" path="res://Characters/characters.png" id="1_q26xa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1k466"]
@@ -144,8 +145,13 @@ states/walk_top/node = SubResource("AnimationNodeAnimation_fax0y")
 states/walk_top/position = Vector2(521, 68)
 graph_offset = Vector2(-21, -5)
 
-[node name="Worker" type="CharacterBody2D"]
+[node name="Worker" type="CharacterBody2D" node_paths=PackedStringArray("navigationAgent")]
 collision_mask = 0
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_87nvl")
+walkingSpeed = 200.0
+navigationAgent = NodePath("NavigationAgent2D")
 
 [node name="Character" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -166,3 +172,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_p8g4m")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
