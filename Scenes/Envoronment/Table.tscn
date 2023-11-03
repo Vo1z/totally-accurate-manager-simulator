@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd8rswp2pwwyw"]
+
+[ext_resource type="Texture2D" uid="uid://cfgi5n77atq6g" path="res://OfficeArt/table_wallt.png" id="1_sa2xg"]
+[ext_resource type="Texture2D" uid="uid://d008lk2j18rmf" path="res://OfficeArt/table_left.png" id="2_ykgsx"]
+[ext_resource type="Texture2D" uid="uid://ds0ktuijdt5mi" path="res://OfficeArt/table_wall_vertical.png" id="3_3ds2c"]
+[ext_resource type="Texture2D" uid="uid://dj1phnjbgbe5g" path="res://OfficeArt/computer.png" id="4_gm8su"]
+
+[node name="Table" type="Node2D"]
+position = Vector2(1384, 368)
+scale = Vector2(2, 2)
+
+[node name="TableWallt" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-24, -24)
+scale = Vector2(3, 3)
+texture = ExtResource("1_sa2xg")
+
+[node name="TableLeft" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_ykgsx")
+
+[node name="TableLeft4" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(0, 56)
+scale = Vector2(3, -3)
+texture = ExtResource("2_ykgsx")
+
+[node name="TableLeft2" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-59, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ykgsx")
+
+[node name="TableLeft3" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-59, 56)
+rotation = -6.28319
+scale = Vector2(3, -3)
+texture = ExtResource("2_ykgsx")
+
+[node name="TableWallVertical" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-28, -2)
+scale = Vector2(3, 3)
+texture = ExtResource("3_3ds2c")
+
+[node name="TableWallVertical2" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-28, 76)
+scale = Vector2(3, 3)
+texture = ExtResource("3_3ds2c")
+
+[node name="Computer" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-56, 20)
+scale = Vector2(2.85714, 2.85714)
+texture = ExtResource("4_gm8su")
+
+[node name="Computer2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 20)
+scale = Vector2(-2.857, 2.857)
+texture = ExtResource("4_gm8su")
