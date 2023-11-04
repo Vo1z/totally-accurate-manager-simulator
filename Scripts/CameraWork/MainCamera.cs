@@ -38,6 +38,7 @@ public partial class MainCamera : Camera2D
 				continue;
 			
 			worker.OnBeingDragged();
+			return;
 		}
 	}
 }

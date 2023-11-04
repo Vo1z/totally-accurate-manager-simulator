@@ -12,9 +12,10 @@ scale = Vector2(2, 2)
 [node name="TableWallt" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(-24, -24)
+position = Vector2(-23.5, -33.5)
 scale = Vector2(3, 3)
 texture = ExtResource("1_sa2xg")
+offset = Vector2(0, 3)
 
 [node name="TableLeft" type="Sprite2D" parent="."]
 y_sort_enabled = true

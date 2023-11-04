@@ -5,12 +5,12 @@ namespace Ingame.Npc;
 
 public sealed class WaitingForAvailableResourcePointState : IState
 {
-	private readonly ResourcePoint _resourcePoint;
+	public readonly ResourcePoint resourcePoint;
 	private readonly Worker _worker;
 
 	public WaitingForAvailableResourcePointState(ResourcePoint resourcePoint, Worker worker)
 	{
-		_resourcePoint = resourcePoint;
+		this.resourcePoint = resourcePoint;
 		_worker = worker;
 	}
 	
@@ -21,9 +21,9 @@ public sealed class WaitingForAvailableResourcePointState : IState
 
 	public void OnTick(double deltaTime)
 	{
-		if(_resourcePoint.IsBusy)
+		if(resourcePoint.IsBusy)
 			return;
 		
-		_worker.stateMachine.SwitchState(new ReachingResourceState(_resourcePoint, _worker));
+		_worker.stateMachine.SwitchState(new ReachingResourceState(resourcePoint, _worker));
 	}
 }

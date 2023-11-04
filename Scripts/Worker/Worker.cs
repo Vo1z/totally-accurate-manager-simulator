@@ -23,7 +23,6 @@ public partial class Worker : CharacterBody2D
 
 	private Lazy<ResourcesService> _resourcesService = new(ServiceLocator.Get<ResourcesService>);
 	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
-	private Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
 	
 	public readonly StateMachine stateMachine = new();
 	
@@ -108,6 +107,13 @@ public partial class Worker : CharacterBody2D
 		{
 			uiParent.Show();
 			resourceIcon.Texture = gameConfig.GetReSourceTexture(reachingResourceState.resourcePoint.ResourceType);
+			return;
+		}
+		
+		if(state is WaitingForAvailableResourcePointState waitingForAvailableResourcePointState)
+		{
+			uiParent.Show();
+			resourceIcon.Texture = gameConfig.GetReSourceTexture(waitingForAvailableResourcePointState.resourcePoint.ResourceType);
 			return;
 		}
 		
