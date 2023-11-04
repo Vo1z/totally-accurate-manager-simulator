@@ -1,4 +1,4 @@
-﻿namespace Ingame.Npc;
+namespace Ingame.Npc;
 
 public enum WorkerId
 {

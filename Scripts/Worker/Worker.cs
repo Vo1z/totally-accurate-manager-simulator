@@ -6,6 +6,7 @@ using Ingame.Input;
 using Ingame.Resources;
 using Ingame.Scripts;
 using Ingame.Service;
+using Ingame.Utils;
 
 namespace Ingame.Npc;
 
@@ -20,6 +21,7 @@ public partial class Worker : CharacterBody2D
 	[Export] private AnimationPlayer animationPlayer;
 	[Export] private TextureRect resourceIcon;
 	[Export] private Node2D uiParent;
+	[Export] private Sprite2D workerSprite;
 
 	private Lazy<ResourcesService> _resourcesService = new(ServiceLocator.Get<ResourcesService>);
 	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
@@ -34,6 +36,7 @@ public partial class Worker : CharacterBody2D
 
 	public override void _Ready()
 	{
+		((ShaderMaterial)workerSprite.Material).SetShaderParameter("workerColor", ColorUtils.GetWorkerColor(workerId));
 		stateMachine.OnStateChanged += OnStateChanged;
 		stateMachine.SwitchState(new ReachingPcState(this, _resourcesService.Value.GetPcPoint(workerId)));
 	}

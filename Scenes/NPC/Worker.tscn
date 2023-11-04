@@ -1,10 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bct3kqqns55qs"]
+[gd_scene load_steps=16 format=3 uid="uid://bct3kqqns55qs"]
 
 [ext_resource type="Texture2D" uid="uid://bvpkhturxvojr" path="res://Characters/characters.png" id="1_q26xa"]
 [ext_resource type="Script" path="res://Scripts/Worker/Worker.cs" id="1_s7o4q"]
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_ulglj"]
+[ext_resource type="Shader" path="res://Scripts/Shaders/Worker.gdshader" id="3_8yx7c"]
 [ext_resource type="Texture2D" uid="uid://c3fxcewqkmrwe" path="res://OfficeArt/paper.png" id="4_0bxd3"]
 [ext_resource type="Texture2D" uid="uid://37uqq66y6m0" path="res://OfficeArt/water-cooler.png" id="5_u1oxi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xstqa"]
+resource_local_to_scene = true
+shader = ExtResource("3_8yx7c")
+shader_parameter/workerColor = Vector4(1, 1, 1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1k466"]
 size = Vector2(46, 67)
@@ -119,7 +125,7 @@ _data = {
 "walk_top": SubResource("Animation_x0xsw")
 }
 
-[node name="Worker" type="CharacterBody2D" node_paths=PackedStringArray("navigationAgent", "animationPlayer", "resourceIcon", "uiParent")]
+[node name="Worker" type="CharacterBody2D" node_paths=PackedStringArray("navigationAgent", "animationPlayer", "resourceIcon", "uiParent", "workerSprite")]
 collision_mask = 0
 motion_mode = 1
 wall_min_slide_angle = 0.0
@@ -130,9 +136,11 @@ navigationAgent = NodePath("NavigationAgent2D")
 animationPlayer = NodePath("AnimationPlayer")
 resourceIcon = NodePath("UI/TextureRect")
 uiParent = NodePath("UI")
+workerSprite = NodePath("Character")
 
 [node name="Character" type="Sprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_xstqa")
 position = Vector2(0, -41)
 scale = Vector2(5, 5)
 texture = ExtResource("1_q26xa")
