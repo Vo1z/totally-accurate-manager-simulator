@@ -19,11 +19,6 @@ public sealed class ReachingPcState : IState
 		_worker.TargetPosition = _pcPoint.GlobalPosition;
 	}
 
-	public void OnExit()
-	{
-		
-	}
-
 	public void OnTick(double deltaTime)
 	{
 		

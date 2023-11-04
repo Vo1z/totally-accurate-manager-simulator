@@ -45,8 +45,6 @@ public partial class Worker : CharacterBody2D
 	
 	private void MoveTowardsTargetPosition()
 	{
-		TargetPosition = GetGlobalMousePosition();
-		
 		var position = GlobalPosition;
 		var nextPosition = navigationAgent.GetNextPathPosition();
 		var deltaVector = nextPosition - position;

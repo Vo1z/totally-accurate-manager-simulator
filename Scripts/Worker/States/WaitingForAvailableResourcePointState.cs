@@ -19,11 +19,6 @@ public sealed class WaitingForAvailableResourcePointState : IState
 		_worker.TargetPosition = _worker.GlobalPosition;
 	}
 
-	public void OnExit()
-	{
-		
-	}
-
 	public void OnTick(double deltaTime)
 	{
 		if(_resourcePoint.IsBusy)

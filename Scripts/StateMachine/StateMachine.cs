@@ -1,4 +1,4 @@
-﻿namespace Ingame.FSM;
+namespace Ingame.FSM;
 
 public sealed class StateMachine
 {
@@ -6,7 +6,6 @@ public sealed class StateMachine
 
 	public void SwitchState(IState newState)
 	{
-		CurrentState.OnExit();
 		CurrentState = newState;
 		CurrentState.OnEnter();
 	}

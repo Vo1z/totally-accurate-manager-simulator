@@ -13,15 +13,15 @@ public sealed class ResourcesService : IGameService
 	public ResourcesService(SceneService sceneService)
 	{
 		_sceneService = sceneService;
-		sceneService.OnSceneLoaded += OnSceneLoaded;
+		sceneService.OnSceneStartedLoading += OnSceneStartedLoading;
 	}
 	
 	~ResourcesService()
 	{
-		_sceneService.OnSceneLoaded -= OnSceneLoaded;
+		_sceneService.OnSceneStartedLoading -= OnSceneStartedLoading;
 	}
 
-	private void OnSceneLoaded(SceneType _)
+	private void OnSceneStartedLoading(SceneType _)
 	{
 		_resourcePoints.Clear();
 		_pcPoints.Clear();

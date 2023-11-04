@@ -19,11 +19,6 @@ public sealed class BusyByResourceState : IState
 		resourcePoint.SetBusy(_worker);
 	}
 
-	public void OnExit()
-	{
-		
-	}
-
 	public void OnTick(double deltaTime)
 	{
 		

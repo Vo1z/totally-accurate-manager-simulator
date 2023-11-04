@@ -24,11 +24,6 @@ public sealed class WorkingState : IState
 		_timeLeftTillNextEvent = RndUtils.Range(_gameConfig.WorkerNewEventIntervalRange);
 	}
 
-	public void OnExit()
-	{
-		
-	}
-
 	public void OnTick(double deltaTime)
 	{
 		_timeLeftTillNextEvent -= deltaTime;

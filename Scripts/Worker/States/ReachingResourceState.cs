@@ -18,12 +18,7 @@ public sealed class ReachingResourceState : IState
 	{
 		_worker.TargetPosition = resourcePoint.GlobalPosition;
 	}
-
-	public void OnExit()
-	{
-		
-	}
-
+	
 	public void OnTick(double deltaTime)
 	{
 		if(!resourcePoint.IsBusy)

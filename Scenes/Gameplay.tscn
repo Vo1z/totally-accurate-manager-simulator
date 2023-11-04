@@ -2663,3 +2663,4 @@ resourceType = 3
 
 [node name="PcPoint" parent="." instance=ExtResource("22_srmhp")]
 position = Vector2(848, 657)
+scale = Vector2(0.961039, 0.998433)

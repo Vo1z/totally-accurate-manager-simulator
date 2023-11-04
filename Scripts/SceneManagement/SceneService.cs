@@ -11,7 +11,7 @@ public partial class SceneService : Node, IGameService
 	
 	private Node _currentScene;
 	
-	public event Action<SceneType> OnSceneLoaded;
+	public event Action<SceneType> OnSceneStartedLoading;
 
 	public void LoadScene(SceneType sceneType)
 	{
@@ -23,9 +23,9 @@ public partial class SceneService : Node, IGameService
 			case SceneType.MainMenu:
 				break;
 			case SceneType.Gameplay:
+				OnSceneStartedLoading?.Invoke(sceneType);
 				_currentScene = gameplayScene.Instantiate();
 				sceneRoot.AddChild(_currentScene);
-				OnSceneLoaded?.Invoke(sceneType);
 				break;
 			default:
 				throw new ArgumentOutOfRangeException(nameof(sceneType), sceneType, null);

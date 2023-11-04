@@ -5,4 +5,5 @@
 [resource]
 script = ExtResource("1_euo20")
 WorkerNewEventIntervalRange = Vector2(1, 5)
-ResourceCollectionDurationRange = Vector2(1, 5)
+ResourceCollectionDurationRange = Vector2(5, 10)
+SpeedUpValue = 1.0
