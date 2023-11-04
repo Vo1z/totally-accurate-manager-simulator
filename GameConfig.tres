@@ -14,9 +14,11 @@
 
 [resource]
 script = ExtResource("1_euo20")
-WorkerNewEventIntervalRange = Vector2(1, 5)
-ResourceCollectionDurationRange = Vector2(5, 10)
-SpeedUpValue = 1.0
+workerNewEventIntervalRange = Vector2(3, 8)
+resourceCollectionDurationRange = Vector2(5, 10)
+projectContributionPerSecond = 1
+speedUpValue = 0.5
+amountOfWorkToBeDone = 100
 coffee = ExtResource("3_qhoh7")
 food = ExtResource("5_hxhae")
 water = ExtResource("10_tt23v")
@@ -26,4 +28,4 @@ couch = ExtResource("4_fxtj6")
 redTrashBin = ExtResource("7_53icc")
 greenTrashBin = ExtResource("6_a5qvf")
 blueTrashBin = ExtResource("1_7e0v0")
-PcTexture = ExtResource("1_wcj3l")
+pcTexture = ExtResource("1_wcj3l")

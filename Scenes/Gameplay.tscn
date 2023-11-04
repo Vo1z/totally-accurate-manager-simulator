@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dklrvkiv3svwh" path="res://OfficeArt/book.png" id="4_4gmkw"]
 [ext_resource type="Texture2D" uid="uid://b8yybu5d8ft7x" path="res://OfficeArt/wall.png" id="4_fi3vw"]
 [ext_resource type="Texture2D" uid="uid://cnb3rbnj8ijdc" path="res://OfficeArt/door.png" id="5_qtnt3"]
-[ext_resource type="Texture2D" uid="uid://bn45hrab2te14" path="res://OfficeArt/clock.png" id="6_glq56"]
 [ext_resource type="Texture2D" uid="uid://l41xmi7rvrls" path="res://OfficeArt/side_wall.png" id="7_acr7i"]
 [ext_resource type="Texture2D" uid="uid://df5a1osho52k2" path="res://OfficeArt/wall_front_cut.png" id="8_pilli"]
 [ext_resource type="Texture2D" uid="uid://bg54hybfmw6u7" path="res://OfficeArt/wall_front.png" id="9_jmi1a"]
@@ -26,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://cpq3ciukyldl6" path="res://Scenes/Envoronment/PcPoint.tscn" id="22_srmhp"]
 [ext_resource type="Texture2D" uid="uid://cp5tox1vuunsq" path="res://OfficeArt/console.png" id="25_01so8"]
 [ext_resource type="Texture2D" uid="uid://dnl2sx7j4ne5s" path="res://OfficeArt/tv.png" id="26_k7nvb"]
+[ext_resource type="PackedScene" uid="uid://0i86ip7xbp7o" path="res://Scenes/UI/GameplayUi.tscn" id="27_6x3js"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qjcge"]
 vertices = PackedVector2Array(1910, 276, 1917, 1065, 1885, 1062, 1884, 1008, 1563, 1010, 1562, 1056, 1506, 1051, 1510, 1010, 763, 634, 831, 635, 832, 720, 759, 716, 663, 684, 1174, 1055, 1080, 1055, 1083, 1005, 1175, 1005, 983, 857, 982, 769, 1090, 774, 1085, 858, 1791, 859, 1786, 772, 1881, 772, 1881, 864, 830, 780, 832, 862, 763, 860, 760, 780, 1651, 774, 1658, 860, 1559, 864, 1569, 773, -5, 309, -6, 273, 166, 275, 104, 314, 169, 337, 100, 376, 294, 377, 286, 343, 1791, 1004, 1788, 916, 1882, 916, 1879, 718, 1878, 629, 1879, 577, 1406, 1000, 1404, 914, 1506, 915, 1164, 771, 1263, 775, 1268, 855, 1172, 858, 345.159, 1064.35, 290, 1065, 295, 788, 388, 787, 542, 786, 545, 1062, 444, 785, 830, 928, 831, 1008, 766, 1007, 767, 926, 976, 276, 1686, 287, 1683, 357, 1294, 364, 992, 312, 980, 997, 986, 909, 1081, 917, 1787, 716, 1790, 627, 1800, 277, 1802, 490, 1298, 488, 1561, 579, 1501, 574, 822, 313, 822, 275, 996, 359, 1211, 367, 1211, 488, 285, 224, 698, 220, 700, 489, 367, 675, 294, 620, 448, 673, 176, 1099, -6, 1099, -7, 551, 181, 551, 183, 618, 184, 673, 765, 1075, 664, 1074, 1507, 862, 1404, 859, 1405, 773, 1509, 771, 1565, 631, 1653, 633, 1656, 717, 1569, 722, 1514, 716, 1408, 712, 1408, 632, 1502, 627, 1267, 714, 1161, 724, 1086, 724, 983, 714, 982, 630, 1097, 624, 1173, 625, 1266, 631, 1175, 912, 1267, 918, 1265, 999, 1565, 913, 1654, 915, 1656, 1000, 1171, 580, 1095, 575, 763, 571)
@@ -33,6 +33,16 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(285, 224, 286, 343, 169, 337, 166, 275, -6, 273, -5, 309, 104, 314, 100, 376, 294, 377, 294, 620, 183, 618, 181, 551, -7, 551, -6, 1099, 176, 1099, 184, 673, 367, 675, 388, 787, 295, 788, 290, 1065, 345.159, 1064.35, 545, 1062, 542, 786, 444, 785, 448, 673, 663, 684, 664, 1074, 765, 1075, 766, 1007, 831, 1008, 830, 928, 767, 926, 763, 860, 832, 862, 830, 780, 760, 780, 759, 716, 832, 720, 831, 635, 763, 634, 763, 571, 1095, 575, 1097, 624, 982, 630, 983, 714, 1086, 724, 1090, 774, 982, 769, 983, 857, 1085, 858, 1081, 917, 986, 909, 980, 997, 1083, 1005, 1080, 1055, 1174, 1055, 1175, 1005, 1265, 999, 1267, 918, 1175, 912, 1172, 858, 1268, 855, 1263, 775, 1164, 771, 1161, 724, 1267, 714, 1266, 631, 1173, 625, 1171, 580, 1501, 574, 1502, 627, 1408, 632, 1408, 712, 1514, 716, 1509, 771, 1405, 773, 1404, 859, 1507, 862, 1506, 915, 1404, 914, 1406, 1000, 1510, 1010, 1506, 1051, 1562, 1056, 1563, 1010, 1656, 1000, 1654, 915, 1565, 913, 1559, 864, 1658, 860, 1651, 774, 1569, 773, 1569, 722, 1656, 717, 1653, 633, 1565, 631, 1561, 579, 1879, 577, 1878, 629, 1790, 627, 1787, 716, 1879, 718, 1881, 772, 1786, 772, 1791, 859, 1881, 864, 1882, 916, 1788, 916, 1791, 1004, 1884, 1008, 1885, 1062, 1917, 1065, 1910, 276, 1800, 277, 1802, 490, 1298, 488, 1294, 364, 1683, 357, 1686, 287, 976, 276, 822, 275, 822, 313, 992, 312, 996, 359, 1211, 367, 1211, 488, 700, 489, 698, 220)])
 
 [node name="Gameplay" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("27_6x3js")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(18, -4)
@@ -2462,12 +2472,6 @@ y_sort_enabled = true
 position = Vector2(-203, -38)
 scale = Vector2(1.5, 1.5)
 
-[node name="Clock" type="Sprite2D" parent="SortingParent/Door"]
-texture_filter = 1
-position = Vector2(539.333, 56)
-scale = Vector2(3.62425, 3.53085)
-texture = ExtResource("6_glq56")
-
 [node name="Door" type="Sprite2D" parent="SortingParent/Door"]
 texture_filter = 1
 position = Vector2(566, 120.313)
@@ -2616,21 +2620,9 @@ position = Vector2(161, 470.667)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
-[node name="VendingMachine" type="Sprite2D" parent="SortingParent/HrRoom/VendingMachine"]
-texture_filter = 1
-position = Vector2(161, 472)
-scale = Vector2(4.66667, 4.66667)
-texture = ExtResource("14_jmj4k")
-
 [node name="VendingMachine2" type="Sprite2D" parent="SortingParent/HrRoom"]
 texture_filter = 1
 position = Vector2(20, 472)
-scale = Vector2(4.66667, 4.66667)
-texture = ExtResource("14_jmj4k")
-
-[node name="VendingMachine" type="Sprite2D" parent="SortingParent/HrRoom/VendingMachine2"]
-texture_filter = 1
-position = Vector2(161, 472)
 scale = Vector2(4.66667, 4.66667)
 texture = ExtResource("14_jmj4k")
 
@@ -2699,66 +2691,68 @@ y_sort_enabled = true
 y_sort_enabled = true
 position = Vector2(490.102, 431.429)
 
-[node name="ResourcePoint-Coffee" parent="." instance=ExtResource("21_jcyhk")]
+[node name="InteractionPoints" type="Node2D" parent="."]
+
+[node name="ResourcePoint-Coffee" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(1650, 286)
 
-[node name="ResourcePoint-BlueBin" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-BlueBin" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(320, 256)
 resourceType = 8
 
-[node name="ResourcePoint-Book" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-Book" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(109, 273)
 resourceType = 4
 
-[node name="ResourcePoint-Food" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-Food" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(167, 538)
 resourceType = 1
 
-[node name="ResourcePoint-GreenBin" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-GreenBin" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(550, 808)
 resourceType = 7
 
-[node name="ResourcePoint-RedBin" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-RedBin" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(1325, 277)
 resourceType = 6
 
-[node name="ResourcePoint-Water" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-Water" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(1865, 293)
 resourceType = 2
 
-[node name="ResourcePoint-Couch" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-Couch" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(919, 265)
 resourceType = 5
 
-[node name="ResourcePoint-VideoGames" parent="." instance=ExtResource("21_jcyhk")]
+[node name="ResourcePoint-VideoGames" parent="InteractionPoints" instance=ExtResource("21_jcyhk")]
 position = Vector2(427, 939)
 resourceType = 3
 
-[node name="PcPoint-Red" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Red" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(857, 679)
 scale = Vector2(0.961039, 0.998433)
 
-[node name="PcPoint-Green" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Green" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(1019, 961)
 scale = Vector2(0.961039, 0.998433)
 workerId = 1
 
-[node name="PcPoint-Blue" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Blue" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(1267, 820)
 scale = Vector2(0.961039, 0.998433)
 workerId = 2
 
-[node name="PcPoint-Yellow" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Yellow" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(1445, 962)
 scale = Vector2(0.961039, 0.998433)
 workerId = 4
 
-[node name="PcPoint-Black" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Black" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(1645, 820)
 scale = Vector2(0.961039, 0.998433)
 workerId = 5
 
-[node name="PcPoint-Purple" parent="." instance=ExtResource("22_srmhp")]
+[node name="PcPoint-Purple" parent="InteractionPoints" instance=ExtResource("22_srmhp")]
 position = Vector2(1838, 823)
 scale = Vector2(0.961039, 0.998433)
 workerId = 3

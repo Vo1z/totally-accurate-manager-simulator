@@ -1,7 +1,9 @@
-﻿using Ingame.FSM;
+﻿using Godot;
+using Ingame.FSM;
+using Ingame.GameSession;
 using Ingame.Resources;
+using Ingame.Scripts;
 using Ingame.Utils;
-using sperasoftgamejam.Scripts;
 
 namespace Ingame.Npc;
 
@@ -10,18 +12,21 @@ public sealed class WorkingState : IState
 	private readonly GameConfig _gameConfig;
 	private readonly Worker _worker;
 	private readonly ResourcesService _resourcesService;
+	private readonly GameSessionService _gameSessionService;
 	private double _timeLeftTillNextEvent;
 
-	public WorkingState(GameConfig gameConfig, Worker worker, ResourcesService resourcesService)
+	public WorkingState(GameConfig gameConfig, Worker worker, ResourcesService resourcesService, GameSessionService gameSessionService)
 	{
 		_gameConfig = gameConfig;
 		_worker = worker;
 		_resourcesService = resourcesService;
+		_gameSessionService = gameSessionService;
 	}
 	
 	public void OnEnter()
 	{
-		_timeLeftTillNextEvent = RndUtils.Range(_gameConfig.WorkerNewEventIntervalRange);
+		_timeLeftTillNextEvent = RndUtils.Range(_gameConfig.workerNewEventIntervalRange);
+		_gameSessionService.ContributeToProjectProgress(Mathf.FloorToInt(_timeLeftTillNextEvent * _gameConfig.projectContributionPerSecond));
 	}
 
 	public void OnTick(double deltaTime)

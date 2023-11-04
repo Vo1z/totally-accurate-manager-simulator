@@ -1,10 +1,11 @@
 using System;
 using Godot;
 using Ingame.FSM;
+using Ingame.GameSession;
 using Ingame.Input;
 using Ingame.Resources;
+using Ingame.Scripts;
 using Ingame.Service;
-using sperasoftgamejam.Scripts;
 
 namespace Ingame.Npc;
 
@@ -22,6 +23,7 @@ public partial class Worker : CharacterBody2D
 
 	private Lazy<ResourcesService> _resourcesService = new(ServiceLocator.Get<ResourcesService>);
 	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
+	private Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
 	
 	public readonly StateMachine stateMachine = new();
 	
@@ -98,7 +100,7 @@ public partial class Worker : CharacterBody2D
 		if(state is ReachingPcState reachingPcState)
 		{
 			uiParent.Show();
-			resourceIcon.Texture = gameConfig.PcTexture;
+			resourceIcon.Texture = gameConfig.pcTexture;
 			return;
 		}
 
@@ -116,10 +118,10 @@ public partial class Worker : CharacterBody2D
 	{
 		if(stateMachine.CurrentState is BeingDraggedState { previousState: ReachingPcState prevReachingPcState })
 		{
-			if(prevReachingPcState.pcPoint.WorkerId == workerId)
+			if(pcPoint.WorkerId == workerId)
 			{
 				GlobalPosition = pcPoint.GlobalPosition;
-				stateMachine.SwitchState(new WorkingState(gameConfig, this, ServiceLocator.Get<ResourcesService>()));
+				stateMachine.SwitchState(new WorkingState(gameConfig, this, ServiceLocator.Get<ResourcesService>(), ServiceLocator.Get<GameSessionService>()));
 				return;
 			}
 		}
@@ -130,7 +132,7 @@ public partial class Worker : CharacterBody2D
 		if(stateMachine.CurrentState is not ReachingPcState)
 			return;
 		
-		stateMachine.SwitchState(new WorkingState(gameConfig, this, ServiceLocator.Get<ResourcesService>()));
+		stateMachine.SwitchState(new WorkingState(gameConfig, this, ServiceLocator.Get<ResourcesService>(), ServiceLocator.Get<GameSessionService>()));
 	}
 	
 	public void OnResourcePointEntered(ResourcePoint resourcePoint)

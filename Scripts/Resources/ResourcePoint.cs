@@ -1,8 +1,8 @@
 using Godot;
 using Ingame.Npc;
+using Ingame.Scripts;
 using Ingame.Service;
 using Ingame.Utils;
-using sperasoftgamejam.Scripts;
 
 namespace Ingame.Resources;
 
@@ -42,7 +42,7 @@ public partial class ResourcePoint : Node2D
 
 	private void OnSpeedUpButtonPressed()
 	{
-		_currentProgress += gameConfig.SpeedUpValue;
+		_currentProgress += gameConfig.speedUpValue;
 	}
 	
 	private void OnBodyEntered(Node2D body)
@@ -61,7 +61,7 @@ public partial class ResourcePoint : Node2D
 		IsBusy = true;
 		_worker = worker;
 		_currentProgress = 0f;
-		_currentFinalValue = RndUtils.Range(gameConfig.ResourceCollectionDurationRange);
+		_currentFinalValue = RndUtils.Range(gameConfig.resourceCollectionDurationRange);
 		
 		progressBar.Show();
 		speedUpButton.Show();

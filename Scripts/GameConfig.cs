@@ -2,14 +2,18 @@ using System;
 using Godot;
 using Ingame.Resources;
 
-namespace sperasoftgamejam.Scripts;
+namespace Ingame.Scripts;
 
 [Tool]
 public partial class GameConfig : Resource
 {
-	[Export] public Vector2 WorkerNewEventIntervalRange;
-	[Export] public Vector2 ResourceCollectionDurationRange;
-	[Export] public float SpeedUpValue = 1f;
+	[Export] public Vector2 workerNewEventIntervalRange;
+	[Export] public Vector2 resourceCollectionDurationRange;
+	[Export] public int projectContributionPerSecond;
+	[Export] public float speedUpValue = 1f;
+	[Export] public int amountOfWorkToBeDone = 100;
+	[Export] public int daysToCompleteProject = 3;
+	[Export] public int dayDuration = 120;
 	
 	[ExportCategory("Resources")]
 	[Export] private Texture2D coffee;
@@ -21,7 +25,7 @@ public partial class GameConfig : Resource
 	[Export] private Texture2D redTrashBin;
 	[Export] private Texture2D greenTrashBin;
 	[Export] private Texture2D blueTrashBin;
-	[Export] public Texture2D PcTexture;
+	[Export] public Texture2D pcTexture;
 
 	public Texture2D GetReSourceTexture(ResourceType resourceType)
 	{
