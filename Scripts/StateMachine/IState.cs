@@ -1,8 +1,8 @@
-﻿namespace Ingame.StateMachine;
+﻿namespace Ingame.FSM;
 
 public interface IState
 {
 	void OnEnter();
 	void OnExit();
-	void OnTick();
+	void OnTick(double deltaTime);
 }

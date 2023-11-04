@@ -2,14 +2,13 @@
 
 public enum ResourceType
 {
-	Pc,
-	Coffee,
-	Food,
-	Water,
-	VideoGames,
-	Book,
-	Couch,
-	RedTrashBin,
-	GreenTrashBin,
-	BlueTrashBin
+	Coffee = 0,
+	Food = 1,
+	Water = 2,
+	VideoGames = 3,
+	Book = 4,
+	Couch = 5,
+	RedTrashBin = 6,
+	GreenTrashBin = 7,
+	BlueTrashBin = 8
 }

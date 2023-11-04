@@ -1,18 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://yd7sxl4u0eec"]
+[gd_scene load_steps=4 format=3 uid="uid://yd7sxl4u0eec"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/ResourcePoint.cs" id="1_b7yss"]
+[ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_i7q31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxah"]
-size = Vector2(48.1328, 50.6187)
+size = Vector2(48.1328, 105.072)
 
-[node name="ResourcePoint" type="Node2D"]
+[node name="ResourcePoint" type="Node2D" node_paths=PackedStringArray("progressBar", "speedUpButton")]
 script = ExtResource("1_b7yss")
+gameConfig = ExtResource("2_i7q31")
+progressBar = NodePath("UI/ProgressBar")
+speedUpButton = NodePath("UI/Button")
 
 [node name="ResourceTrigger" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceTrigger"]
-position = Vector2(9.53674e-07, 9.53674e-07)
+position = Vector2(9.53674e-07, 35.5)
 scale = Vector2(1.66207, 1.30387)
 shape = SubResource("RectangleShape2D_ygxah")
 
-[connection signal="body_entered" from="ResourceTrigger" to="." method="_on_resource_trigger_body_entered"]
+[node name="UI" type="Node2D" parent="."]
+position = Vector2(1, -78)
+
+[node name="Button" type="Button" parent="UI"]
+offset_left = -57.0
+offset_top = 5.0
+offset_right = 66.0
+offset_bottom = 36.0
+text = "Speed up!"
+
+[node name="ProgressBar" type="ProgressBar" parent="UI"]
+texture_filter = 1
+offset_left = -92.0
+offset_top = -27.0
+offset_right = 100.0
+scale = Vector2(0.997776, 1.00131)
+value = 30.0
+
+[connection signal="body_entered" from="ResourceTrigger" to="." method="OnBodyEntered"]

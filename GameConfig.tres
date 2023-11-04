@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://com0vc2egetnf"]
+
+[ext_resource type="Script" path="res://Scripts/GameConfig.cs" id="1_euo20"]
+
+[resource]
+script = ExtResource("1_euo20")
+WorkerNewEventIntervalRange = Vector2(1, 5)
+ResourceCollectionDurationRange = Vector2(1, 5)

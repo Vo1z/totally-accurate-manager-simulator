@@ -1,13 +1,13 @@
-﻿namespace Ingame.StateMachine;
+﻿namespace Ingame.FSM;
 
 public sealed class StateMachine
 {
-	private IState _currentState;
-	
+	public IState CurrentState { get; private set; }
+
 	public void SwitchState(IState newState)
 	{
-		_currentState.OnExit();
-		_currentState = newState;
-		_currentState.OnEnter();
+		CurrentState.OnExit();
+		CurrentState = newState;
+		CurrentState.OnEnter();
 	}
 }
