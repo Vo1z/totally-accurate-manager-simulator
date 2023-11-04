@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2ghxuc7gvlwp"]
+[gd_scene load_steps=38 format=3 uid="uid://d2ghxuc7gvlwp"]
 
 [ext_resource type="Script" path="res://Scripts/CameraWork/MainCamera.cs" id="1_d3cl2"]
 [ext_resource type="Texture2D" uid="uid://bxapihslnlj1g" path="res://OfficeArt/floor.png" id="1_u1bpu"]
@@ -26,11 +26,23 @@
 [ext_resource type="Texture2D" uid="uid://cp5tox1vuunsq" path="res://OfficeArt/console.png" id="25_01so8"]
 [ext_resource type="Texture2D" uid="uid://dnl2sx7j4ne5s" path="res://OfficeArt/tv.png" id="26_k7nvb"]
 [ext_resource type="PackedScene" uid="uid://0i86ip7xbp7o" path="res://Scenes/UI/GameplayUi.tscn" id="27_6x3js"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/PuzzleController.cs" id="27_pejt3"]
+[ext_resource type="Texture2D" uid="uid://cyop01ujvkixb" path="res://OfficeArt/hud_monitor.png" id="27_y8h50"]
+[ext_resource type="Texture2D" uid="uid://divq34vt03aq4" path="res://OfficeArt/hud_babcha.png" id="28_4vttn"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/TeamsPuzzle.cs" id="30_awdrd"]
+[ext_resource type="Texture2D" uid="uid://bgb7in6x8lbu3" path="res://OfficeArt/hud_teams_call.png" id="30_bog3r"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/BabchaPuzzle.cs" id="30_rfp8h"]
+[ext_resource type="Texture2D" uid="uid://bavydf0u4jehn" path="res://OfficeArt/Faces/face1.png" id="31_8n2ei"]
+[ext_resource type="Texture2D" uid="uid://dryi5t4g26arx" path="res://OfficeArt/hud_kicel.png" id="34_0lxfb"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/KicelPuzzle.cs" id="35_cek04"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qjcge"]
 vertices = PackedVector2Array(1910, 276, 1917, 1065, 1885, 1062, 1884, 1008, 1563, 1010, 1562, 1056, 1506, 1051, 1510, 1010, 1174, 1055, 1080, 1055, 1083, 1005, 1175, 1005, 983, 857, 982, 769, 1090, 774, 1085, 858, 1791, 859, 1786, 772, 1881, 772, 1881, 864, 830, 780, 832, 862, 763, 860, 760, 780, 764, 656, 831, 654, 830, 714, 759, 716, 663, 684, 1651, 774, 1658, 860, 1559, 864, 1569, 773, -5, 309, -6, 273, 166, 275, 104, 314, 169, 337, 100, 376, 294, 377, 286, 343, 1791, 1004, 1788, 916, 1882, 916, 1879, 718, 1878, 629, 1879, 577, 1406, 1000, 1404, 914, 1506, 915, 1164, 771, 1263, 775, 1268, 855, 1172, 858, 345.159, 1064.35, 290, 1065, 295, 788, 388, 787, 542, 786, 545, 1062, 444, 785, 830, 928, 831, 1008, 766, 1007, 767, 926, 976, 276, 1686, 287, 1683, 357, 1294, 364, 992, 312, 1787, 716, 1790, 627, 1800, 277, 1802, 490, 1298, 488, 1561, 579, 1501, 574, 822, 313, 822, 275, 996, 359, 1211, 367, 1211, 488, 285, 224, 698, 220, 700, 489, 367, 675, 294, 620, 448, 673, 176, 1099, -6, 1099, -7, 551, 181, 551, 183, 618, 184, 673, 765, 1075, 664, 1074, 1507, 862, 1404, 859, 1405, 773, 1509, 771, 1565, 631, 1653, 633, 1656, 717, 1569, 722, 1514, 716, 980, 997, 984, 921, 1081, 917, 1408, 712, 1408, 632, 1502, 627, 1267, 714, 1161, 724, 1086, 724, 983, 714, 982, 630, 1097, 624, 1173, 625, 1266, 631, 1175, 912, 1267, 918, 1265, 999, 1565, 913, 1654, 915, 1656, 1000, 1171, 580, 1095, 575, 763, 571)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(33, 34, 35, 36), PackedInt32Array(36, 35, 37, 38), PackedInt32Array(39, 38, 37, 40), PackedInt32Array(41, 42, 43, 3), PackedInt32Array(0, 3, 43, 19, 18), PackedInt32Array(0, 18, 44, 45, 46), PackedInt32Array(7, 47, 48, 49, 4), PackedInt32Array(50, 51, 52, 53, 15, 14), PackedInt32Array(54, 55, 56, 57), PackedInt32Array(58, 59, 54, 57, 60), PackedInt32Array(61, 62, 63, 64), PackedInt32Array(65, 66, 67, 68, 69), PackedInt32Array(44, 70, 71, 45), PackedInt32Array(72, 0, 46, 73), PackedInt32Array(74, 73, 46, 75, 76), PackedInt32Array(77, 78, 65, 69), PackedInt32Array(79, 69, 68, 80), PackedInt32Array(80, 68, 74, 81), PackedInt32Array(40, 82, 83, 84, 39), PackedInt32Array(85, 86, 39, 84, 87), PackedInt32Array(88, 89, 90, 91, 92, 93), PackedInt32Array(93, 92, 86, 85), PackedInt32Array(64, 63, 94, 95, 28, 22), PackedInt32Array(23, 22, 28), PackedInt32Array(27, 23, 28), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103, 104), PackedInt32Array(10, 105, 106, 107, 11), PackedInt32Array(104, 108, 109, 110, 100), PackedInt32Array(111, 112, 113, 114, 115, 116, 117, 118), PackedInt32Array(119, 120, 121, 11, 107), PackedInt32Array(119, 107, 15, 53), PackedInt32Array(112, 50, 14, 113), PackedInt32Array(122, 123, 124, 4, 49), PackedInt32Array(31, 122, 49, 96, 99), PackedInt32Array(32, 31, 99, 104, 103), PackedInt32Array(75, 100, 110, 76), PackedInt32Array(84, 81, 74, 76, 125, 126), PackedInt32Array(87, 60, 57, 85), PackedInt32Array(24, 28, 87, 84, 127), PackedInt32Array(125, 117, 116, 126), PackedInt32Array(127, 84, 126)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(285, 224, 286, 343, 169, 337, 166, 275, -6, 273, -5, 309, 104, 314, 100, 376, 294, 377, 294, 620, 183, 618, 181, 551, -7, 551, -6, 1099, 176, 1099, 184, 673, 367, 675, 388, 787, 295, 788, 290, 1065, 345.159, 1064.35, 545, 1062, 542, 786, 444, 785, 448, 673, 663, 684, 664, 1074, 765, 1075, 766, 1007, 831, 1008, 830, 928, 767, 926, 763, 860, 832, 862, 830, 780, 760, 780, 759, 716, 830, 714, 831, 654, 764, 656, 763, 571, 1095, 575, 1097, 624, 982, 630, 983, 714, 1086, 724, 1090, 774, 982, 769, 983, 857, 1085, 858, 1081, 917, 984, 921, 980, 997, 1083, 1005, 1080, 1055, 1174, 1055, 1175, 1005, 1265, 999, 1267, 918, 1175, 912, 1172, 858, 1268, 855, 1263, 775, 1164, 771, 1161, 724, 1267, 714, 1266, 631, 1173, 625, 1171, 580, 1501, 574, 1502, 627, 1408, 632, 1408, 712, 1514, 716, 1509, 771, 1405, 773, 1404, 859, 1507, 862, 1506, 915, 1404, 914, 1406, 1000, 1510, 1010, 1506, 1051, 1562, 1056, 1563, 1010, 1656, 1000, 1654, 915, 1565, 913, 1559, 864, 1658, 860, 1651, 774, 1569, 773, 1569, 722, 1656, 717, 1653, 633, 1565, 631, 1561, 579, 1879, 577, 1878, 629, 1790, 627, 1787, 716, 1879, 718, 1881, 772, 1786, 772, 1791, 859, 1881, 864, 1882, 916, 1788, 916, 1791, 1004, 1884, 1008, 1885, 1062, 1917, 1065, 1910, 276, 1800, 277, 1802, 490, 1298, 488, 1294, 364, 1683, 357, 1686, 287, 976, 276, 822, 275, 822, 313, 992, 312, 996, 359, 1211, 367, 1211, 488, 700, 489, 698, 220)])
+
+[sub_resource type="LabelSettings" id="LabelSettings_475qs"]
+font_size = 35
 
 [node name="Gameplay" type="Node2D"]
 
@@ -2777,3 +2789,216 @@ workerId = 5
 position = Vector2(1838, 823)
 scale = Vector2(0.961039, 0.998433)
 workerId = 3
+
+[node name="HudComputer" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 781.0
+offset_right = 302.0
+offset_bottom = 1079.0
+script = ExtResource("27_pejt3")
+
+[node name="ComputerMonitor" type="TextureRect" parent="HudComputer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 5.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("27_y8h50")
+stretch_mode = 5
+
+[node name="BabchaPuzzle" type="TextureRect" parent="HudComputer/ComputerMonitor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.023
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.145999
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("28_4vttn")
+script = ExtResource("30_rfp8h")
+
+[node name="GridContainer" type="GridContainer" parent="HudComputer/ComputerMonitor/BabchaPuzzle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -45.0
+offset_right = 26.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "5
+"
+
+[node name="Button6" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "6"
+
+[node name="Button7" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "7"
+
+[node name="Button8" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "8
+"
+
+[node name="Button9" type="Button" parent="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+text = "9
+"
+
+[node name="TeamsPuzzle" type="TextureRect" parent="HudComputer/ComputerMonitor"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.023
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.145999
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("30_bog3r")
+script = ExtResource("30_awdrd")
+
+[node name="Accept" type="Button" parent="HudComputer/ComputerMonitor/TeamsPuzzle"]
+modulate = Color(0.117647, 1, 0.164706, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -41.0
+offset_right = 89.0
+offset_bottom = -10.0
+grow_vertical = 0
+text = "Accept"
+
+[node name="Decline" type="Button" parent="HudComputer/ComputerMonitor/TeamsPuzzle"]
+modulate = Color(1, 0.0901961, 0.223529, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -41.0
+offset_right = -38.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Decline"
+
+[node name="Label" type="Label" parent="HudComputer/ComputerMonitor/TeamsPuzzle"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 113.0
+offset_right = 159.0
+offset_bottom = 139.0
+text = "Caller"
+
+[node name="TextureRect" type="TextureRect" parent="HudComputer/ComputerMonitor/TeamsPuzzle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -51.0
+offset_right = 23.5
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("31_8n2ei")
+
+[node name="KicelPuzzle" type="TextureRect" parent="HudComputer/ComputerMonitor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.02
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.0399995
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("34_0lxfb")
+script = ExtResource("35_cek04")
+
+[node name="Label" type="Label" parent="HudComputer/ComputerMonitor/KicelPuzzle"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 66.0
+offset_right = 179.0
+offset_bottom = 118.0
+text = "12 + 44 ="
+label_settings = SubResource("LabelSettings_475qs")
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="HudComputer/ComputerMonitor/KicelPuzzle"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 73.0
+offset_right = 279.0
+offset_bottom = 115.0
+placeholder_text = "ANSWER"
+
+[node name="Submit" type="Button" parent="HudComputer/ComputerMonitor/KicelPuzzle"]
+modulate = Color(0, 0.878431, 0, 1)
+layout_mode = 0
+offset_left = 43.0
+offset_top = 139.0
+offset_right = 231.0
+offset_bottom = 180.0
+text = "SUBMIT"
+
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed1"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button2" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed2"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button3" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed3"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button4" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed4"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button5" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed5"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button6" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed6"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button7" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed7"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button8" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed8"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/BabchaPuzzle/GridContainer/Button9" to="HudComputer/ComputerMonitor/BabchaPuzzle" method="OnButtonPressed9"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/TeamsPuzzle/Accept" to="HudComputer/ComputerMonitor/TeamsPuzzle" method="OnAcceptPressed"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/TeamsPuzzle/Decline" to="HudComputer/ComputerMonitor/TeamsPuzzle" method="OnDeclinePressed"]
+[connection signal="pressed" from="HudComputer/ComputerMonitor/KicelPuzzle/Submit" to="HudComputer/ComputerMonitor/KicelPuzzle" method="OnSubmitButtonPressed"]

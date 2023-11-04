@@ -2,6 +2,7 @@ using System;
 using Ingame.SceneManagement;
 using Ingame.Scripts;
 using Ingame.Service;
+using Ingame.Utils;
 
 namespace Ingame.GameSession;
 
@@ -10,9 +11,14 @@ public sealed class GameSessionService : IGameService
 	private readonly SceneService _sceneService;
 	private readonly GameConfig _gameConfig;
 
+	private bool _isInteractionLocked;
+	private bool _isSpeedBoostActive;
+	private int _currentAmountOfWorkers;
+	
+	private int _currentProjectProgress;
+	private int _targetProjectProgress;
+	
 	public int DaysLeft { get; private set; }
-	public int CurrentProjectProgress { get; private set; }
-	public int TargetProjectProgress { get; private set; }
 
 	public GameSessionState CurrentState { get; private set; } = GameSessionState.None;
 	
@@ -38,15 +44,15 @@ public sealed class GameSessionService : IGameService
 		
 		CurrentState = GameSessionState.None;
 		DaysLeft = _gameConfig.daysToCompleteProject;
-		CurrentProjectProgress = 0;
-		TargetProjectProgress = _gameConfig.amountOfWorkToBeDone;
+		_currentProjectProgress = 0;
+		_targetProjectProgress = _gameConfig.amountOfWorkToBeDone;
 	}
 	
 	public void SkipDay()
 	{
 		DaysLeft--;
 		
-		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
+		OnGameProgressChanged?.Invoke(_currentProjectProgress / (float) _targetProjectProgress, DaysLeft);
 
 		if(DaysLeft > 0)
 		{
@@ -60,15 +66,26 @@ public sealed class GameSessionService : IGameService
 	
 	public void ContributeToProjectProgress(int amount)
 	{
-		CurrentProjectProgress += amount;
+		_currentProjectProgress += amount;
 		
-		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
+		OnGameProgressChanged?.Invoke(_currentProjectProgress / (float) _targetProjectProgress, DaysLeft);
 
-		if(CurrentProjectProgress < TargetProjectProgress)
+		if(_currentProjectProgress < _targetProjectProgress)
 			return;
 		
 		CurrentState = GameSessionState.EndedWithVictory;
 		_sceneService.LoadScene(SceneType.GameOver);
+	}
+
+	public void MakeRandomBoost()
+	{
+		
+	}
+
+	private enum BoostType
+	{
+		HireWorker,
+		IncreaseSpeed
 	}
 }
 

@@ -4,7 +4,4 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>sperasoftgamejam</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\GameSession\" />
-  </ItemGroup>
 </Project>

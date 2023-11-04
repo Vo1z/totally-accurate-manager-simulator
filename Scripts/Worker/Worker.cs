@@ -12,6 +12,7 @@ namespace Ingame.Npc;
 
 public partial class Worker : CharacterBody2D
 {
+	private const string WORKER_COLOR_SHADER_PROPERTY = "workerColor";
 	private const float TARGET_POSITION_DELTA = 5f;
 
 	[Export] private GameConfig gameConfig;
@@ -36,7 +37,7 @@ public partial class Worker : CharacterBody2D
 
 	public override void _Ready()
 	{
-		((ShaderMaterial)workerSprite.Material).SetShaderParameter("workerColor", ColorUtils.GetWorkerColor(workerId));
+		(workerSprite.Material as ShaderMaterial)?.SetShaderParameter(WORKER_COLOR_SHADER_PROPERTY, ColorUtils.GetWorkerColor(workerId));
 		stateMachine.OnStateChanged += OnStateChanged;
 		stateMachine.SwitchState(new ReachingPcState(this, _resourcesService.Value.GetPcPoint(workerId)));
 	}
