@@ -1,9 +1,29 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://com0vc2egetnf"]
+[gd_resource type="Resource" load_steps=12 format=3 uid="uid://com0vc2egetnf"]
 
+[ext_resource type="Texture2D" uid="uid://cq86xmgarmxal" path="res://OfficeArt/trashbeen_blue.png" id="1_7e0v0"]
 [ext_resource type="Script" path="res://Scripts/GameConfig.cs" id="1_euo20"]
+[ext_resource type="Texture2D" uid="uid://dj1phnjbgbe5g" path="res://OfficeArt/computer.png" id="1_wcj3l"]
+[ext_resource type="Texture2D" uid="uid://8cmw5w0ff7ts" path="res://OfficeArt/book_shelve.png" id="2_iqqk2"]
+[ext_resource type="Texture2D" uid="uid://dy8vswy37k6ou" path="res://OfficeArt/cofee.png" id="3_qhoh7"]
+[ext_resource type="Texture2D" uid="uid://i2wqk22gt31n" path="res://OfficeArt/sofa.png" id="4_fxtj6"]
+[ext_resource type="Texture2D" uid="uid://4sqw4tvgntr0" path="res://OfficeArt/vending_machine.png" id="5_hxhae"]
+[ext_resource type="Texture2D" uid="uid://dltfecjw0ak1d" path="res://OfficeArt/trashbeen_green.png" id="6_a5qvf"]
+[ext_resource type="Texture2D" uid="uid://jdudps8kfipp" path="res://OfficeArt/trashbeen_red.png" id="7_53icc"]
+[ext_resource type="Texture2D" uid="uid://cp5tox1vuunsq" path="res://OfficeArt/console.png" id="9_vyeqb"]
+[ext_resource type="Texture2D" uid="uid://37uqq66y6m0" path="res://OfficeArt/water-cooler.png" id="10_tt23v"]
 
 [resource]
 script = ExtResource("1_euo20")
 WorkerNewEventIntervalRange = Vector2(1, 5)
 ResourceCollectionDurationRange = Vector2(5, 10)
 SpeedUpValue = 1.0
+coffee = ExtResource("3_qhoh7")
+food = ExtResource("5_hxhae")
+water = ExtResource("10_tt23v")
+videoGames = ExtResource("9_vyeqb")
+book = ExtResource("2_iqqk2")
+couch = ExtResource("4_fxtj6")
+redTrashBin = ExtResource("7_53icc")
+greenTrashBin = ExtResource("6_a5qvf")
+blueTrashBin = ExtResource("1_7e0v0")
+PcTexture = ExtResource("1_wcj3l")

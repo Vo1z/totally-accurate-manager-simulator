@@ -8,13 +8,13 @@ public sealed class BeingDraggedState : IState
 {
 	private readonly Worker _worker;
 	private readonly InputService _inputService;
-	private readonly IState _previousState;
+	public readonly IState previousState;
 
 	public BeingDraggedState(Worker worker, InputService inputService, IState previousState)
 	{
 		_worker = worker;
 		_inputService = inputService;
-		_previousState = previousState;
+		this.previousState = previousState;
 	}
 	
 	public void OnEnter()
@@ -29,6 +29,6 @@ public sealed class BeingDraggedState : IState
 		if(_inputService.IsLeftMouseButtonPressed) 
 			_worker.GlobalPosition = _worker.GetGlobalMousePosition();
 		else
-			_worker.stateMachine.SwitchState(_previousState);
+			_worker.stateMachine.SwitchState(previousState);
 	}
 }

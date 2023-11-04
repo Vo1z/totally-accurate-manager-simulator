@@ -6,17 +6,17 @@ namespace Ingame.Npc;
 public sealed class ReachingPcState : IState
 {
 	private readonly Worker _worker;
-	private readonly PcPoint _pcPoint;
+	public readonly PcPoint pcPoint;
 
 	public ReachingPcState(Worker worker, PcPoint pcPoint)
 	{
 		_worker = worker;
-		_pcPoint = pcPoint;
+		this.pcPoint = pcPoint;
 	}
 	
 	public void OnEnter()
 	{
-		_worker.TargetPosition = _pcPoint.GlobalPosition;
+		_worker.TargetPosition = pcPoint.GlobalPosition;
 	}
 
 	public void OnTick(double deltaTime)

@@ -17,11 +17,12 @@ public partial class Worker : CharacterBody2D
 	[Export] private float walkingSpeed;
 	[Export] private NavigationAgent2D navigationAgent;
 	[Export] private AnimationPlayer animationPlayer;
+	[Export] private TextureRect resourceIcon;
+	[Export] private Node2D uiParent;
 
 	private Lazy<ResourcesService> _resourcesService = new(ServiceLocator.Get<ResourcesService>);
 	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
 	
-	public WorkerId WorkerId => workerId;
 	public readonly StateMachine stateMachine = new();
 	
 	public Vector2 TargetPosition
@@ -32,12 +33,13 @@ public partial class Worker : CharacterBody2D
 
 	public override void _Ready()
 	{
+		stateMachine.OnStateChanged += OnStateChanged;
 		stateMachine.SwitchState(new ReachingPcState(this, _resourcesService.Value.GetPcPoint(workerId)));
 	}
 
-	public override void _Process(double delta)
+	public override void _Process(double deltaTime)
 	{
-		TickFsm(delta);
+		stateMachine.CurrentState?.OnTick(deltaTime);
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -48,7 +50,7 @@ public partial class Worker : CharacterBody2D
 	private void MoveTowardsTargetPosition()
 	{
 		var position = GlobalPosition;
-		var nextPosition = navigationAgent.GetNextPathPosition();
+		var nextPosition = stateMachine.CurrentState is not ReachingPcState && stateMachine.CurrentState is not ReachingResourceState? position : navigationAgent.GetNextPathPosition();
 		var deltaVector = nextPosition - position;
 
 		if(deltaVector.Length() < TARGET_POSITION_DELTA)
@@ -67,11 +69,6 @@ public partial class Worker : CharacterBody2D
 
 		Velocity = velocity;
 		MoveAndSlide();
-	}
-
-	private void TickFsm(double deltaTime)
-	{
-		stateMachine.CurrentState?.OnTick(deltaTime);
 	}
 
 	public void PlayAnimation(AnimationState animationState)
@@ -96,8 +93,37 @@ public partial class Worker : CharacterBody2D
 		}
 	}
 
+	private void OnStateChanged(IState state)
+	{
+		if(state is ReachingPcState reachingPcState)
+		{
+			uiParent.Show();
+			resourceIcon.Texture = gameConfig.PcTexture;
+			return;
+		}
+
+		if(state is ReachingResourceState reachingResourceState)
+		{
+			uiParent.Show();
+			resourceIcon.Texture = gameConfig.GetReSourceTexture(reachingResourceState.resourcePoint.ResourceType);
+			return;
+		}
+		
+		uiParent.Hide();
+	}
+
 	public void OnPcPointEntered(PcPoint pcPoint)
 	{
+		if(stateMachine.CurrentState is BeingDraggedState { previousState: ReachingPcState prevReachingPcState })
+		{
+			if(prevReachingPcState.pcPoint.WorkerId == workerId)
+			{
+				GlobalPosition = pcPoint.GlobalPosition;
+				stateMachine.SwitchState(new WorkingState(gameConfig, this, ServiceLocator.Get<ResourcesService>()));
+				return;
+			}
+		}
+		
 		if(pcPoint.WorkerId != workerId)
 			return;
 		
@@ -109,6 +135,16 @@ public partial class Worker : CharacterBody2D
 	
 	public void OnResourcePointEntered(ResourcePoint resourcePoint)
 	{
+		if(stateMachine.CurrentState is BeingDraggedState { previousState: ReachingResourceState prevReachingResourceState })
+		{
+			if(prevReachingResourceState.resourcePoint.ResourceType == resourcePoint.ResourceType)
+			{
+				GlobalPosition = resourcePoint.GlobalPosition;
+				stateMachine.SwitchState(new BusyByResourceState(resourcePoint, this));
+				return;
+			}
+		}
+		
 		if(stateMachine.CurrentState is not ReachingResourceState reachingResourceState)
 			return;
 		

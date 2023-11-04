@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_i7q31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxah"]
-size = Vector2(48.1328, 105.072)
+size = Vector2(48.1328, 46.0169)
 
 [node name="ResourcePoint" type="Node2D" node_paths=PackedStringArray("progressBar", "speedUpButton")]
 script = ExtResource("1_b7yss")
@@ -15,7 +15,7 @@ speedUpButton = NodePath("UI/Button")
 [node name="ResourceTrigger" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ResourceTrigger"]
-position = Vector2(9.53674e-07, 35.5)
+position = Vector2(9.53674e-07, -3.00006)
 scale = Vector2(1.66207, 1.30387)
 shape = SubResource("RectangleShape2D_ygxah")
 
