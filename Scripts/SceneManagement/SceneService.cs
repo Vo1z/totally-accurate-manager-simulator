@@ -6,7 +6,10 @@ namespace Ingame.SceneManagement;
 
 public partial class SceneService : Node, IGameService
 {
+	[Export] private PackedScene mainMenuScene;
 	[Export] private PackedScene gameplayScene;
+	[Export] private PackedScene daysPassedScene;
+	[Export] private PackedScene gameOverScene;
 	[Export] private Node sceneRoot;
 	
 	private Node _currentScene;
@@ -18,17 +21,17 @@ public partial class SceneService : Node, IGameService
 		if(_currentScene != null)
 			_currentScene.QueueFree();
 
-		switch(sceneType)
+		OnSceneStartedLoading?.Invoke(sceneType);
+
+		_currentScene = sceneType switch
 		{
-			case SceneType.MainMenu:
-				break;
-			case SceneType.Gameplay:
-				OnSceneStartedLoading?.Invoke(sceneType);
-				_currentScene = gameplayScene.Instantiate();
-				sceneRoot.AddChild(_currentScene);
-				break;
-			default:
-				throw new ArgumentOutOfRangeException(nameof(sceneType), sceneType, null);
-		}
+			SceneType.MainMenu => mainMenuScene.Instantiate(),
+			SceneType.Gameplay => gameplayScene.Instantiate(),
+			SceneType.DayPassed => daysPassedScene.Instantiate(),
+			SceneType.GameOver => gameOverScene.Instantiate(),
+			_ => throw new ArgumentOutOfRangeException(nameof(sceneType), sceneType, null)
+		};
+		
+		sceneRoot.AddChild(_currentScene);
 	}
 }

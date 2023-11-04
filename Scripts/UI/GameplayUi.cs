@@ -4,6 +4,8 @@ using Ingame.GameSession;
 using Ingame.Scripts;
 using Ingame.Service;
 
+namespace Ingame.UI;
+
 public partial class GameplayUi : Control
 {
 	private readonly Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);

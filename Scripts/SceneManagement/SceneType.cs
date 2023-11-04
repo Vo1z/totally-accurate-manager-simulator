@@ -3,5 +3,7 @@
 public enum SceneType
 {
 	MainMenu,
-	Gameplay
+	Gameplay,
+	DayPassed,
+	GameOver
 }

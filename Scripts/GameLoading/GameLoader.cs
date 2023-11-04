@@ -16,11 +16,12 @@ public partial class GameLoader : Node
 	
 	public override void _Ready()
 	{
+		ServiceLocator.Reset();
 		ServiceLocator.Register(sceneService);
 		ServiceLocator.Register(inputService);
 		ServiceLocator.Register(new ResourcesService(sceneService));
 		ServiceLocator.Register(new GameSessionService(sceneService, gameConfig));
 
-		sceneService.LoadScene(SceneType.Gameplay);
+		sceneService.LoadScene(SceneType.MainMenu);
 	}
 }

@@ -14,10 +14,9 @@ public sealed class GameSessionService : IGameService
 	public int CurrentProjectProgress { get; private set; }
 	public int TargetProjectProgress { get; private set; }
 
-	public GameSessionState CurrentState { get; private set; } = GameSessionState.Running;
+	public GameSessionState CurrentState { get; private set; } = GameSessionState.None;
 	
 	public event Action<float, int> OnGameProgressChanged; 
-	public event Action<GameSessionState> OnGameSessionEnded; 
 	
 	public GameSessionService(SceneService sceneService, GameConfig gameConfig)
 	{
@@ -32,18 +31,15 @@ public sealed class GameSessionService : IGameService
 		_sceneService.OnSceneStartedLoading -= OnSceneStartedLoading;
 	}
 
-	private void OnSceneStartedLoading(SceneType _)
+	private void OnSceneStartedLoading(SceneType sceneType)
 	{
-		CurrentState = GameSessionState.Running;
+		if(sceneType != SceneType.MainMenu)
+			return;
+		
+		CurrentState = GameSessionState.None;
 		DaysLeft = _gameConfig.daysToCompleteProject;
 		CurrentProjectProgress = 0;
 		TargetProjectProgress = _gameConfig.amountOfWorkToBeDone;
-	}
-
-	private void EndGameSession(GameSessionState state)
-	{
-		CurrentState = state;
-		OnGameSessionEnded?.Invoke(state);
 	}
 	
 	public void SkipDay()
@@ -51,9 +47,15 @@ public sealed class GameSessionService : IGameService
 		DaysLeft--;
 		
 		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
-		
-		if(DaysLeft <= 0)
-			EndGameSession(GameSessionState.EndedWithDefeat);
+
+		if(DaysLeft > 0)
+		{
+			_sceneService.LoadScene(SceneType.DayPassed);
+			return;
+		}
+
+		CurrentState = GameSessionState.EndedWithDefeat;
+		_sceneService.LoadScene(SceneType.GameOver);
 	}
 	
 	public void ContributeToProjectProgress(int amount)
@@ -61,15 +63,18 @@ public sealed class GameSessionService : IGameService
 		CurrentProjectProgress += amount;
 		
 		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
+
+		if(CurrentProjectProgress < TargetProjectProgress)
+			return;
 		
-		if(CurrentProjectProgress >= TargetProjectProgress)
-			EndGameSession(GameSessionState.EndedWithVictory);
+		CurrentState = GameSessionState.EndedWithVictory;
+		_sceneService.LoadScene(SceneType.GameOver);
 	}
 }
 
 public enum GameSessionState
 {
-	Running,
+	None,
 	EndedWithVictory,
 	EndedWithDefeat
 }

@@ -19,4 +19,9 @@ public sealed class ServiceLocator
 	{
 		return (T)Instance._services[typeof(T)];
 	}
+	
+	public static void Reset()
+	{
+		Instance._services.Clear();
+	}
 }

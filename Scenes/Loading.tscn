@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://kfk57lbnt744"]
+[gd_scene load_steps=9 format=3 uid="uid://kfk57lbnt744"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoading/GameLoader.cs" id="1_t38ok"]
 [ext_resource type="Script" path="res://Scripts/Input/InputService.cs" id="2_3cfsu"]
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_45tyg"]
 [ext_resource type="Script" path="res://Scripts/SceneManagement/SceneService.cs" id="2_vfyvb"]
 [ext_resource type="PackedScene" uid="uid://d2ghxuc7gvlwp" path="res://Scenes/Gameplay.tscn" id="3_xlexq"]
+[ext_resource type="PackedScene" uid="uid://bs54g6dhv3sf3" path="res://Scenes/UI/MainMenuUi.tscn" id="5_17h06"]
+[ext_resource type="PackedScene" uid="uid://ddwdu6iolsfet" path="res://Scenes/UI/DayPassedUi.tscn" id="6_jubv6"]
+[ext_resource type="PackedScene" uid="uid://b0pplsuj0ycwn" path="res://Scenes/UI/GameOverUi.tscn" id="8_mt5xw"]
 
 [node name="Loading" type="Node"]
 
@@ -19,7 +22,10 @@ script = ExtResource("2_3cfsu")
 
 [node name="SceneService" type="Node" parent="." node_paths=PackedStringArray("sceneRoot")]
 script = ExtResource("2_vfyvb")
+mainMenuScene = ExtResource("5_17h06")
 gameplayScene = ExtResource("3_xlexq")
+daysPassedScene = ExtResource("6_jubv6")
+gameOverScene = ExtResource("8_mt5xw")
 sceneRoot = NodePath("../SceneRoot")
 
 [node name="SceneRoot" type="Node" parent="."]
