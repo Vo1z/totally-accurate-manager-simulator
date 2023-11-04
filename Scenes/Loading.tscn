@@ -1,14 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://kfk57lbnt744"]
+[gd_scene load_steps=5 format=3 uid="uid://kfk57lbnt744"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoading/GameLoader.cs" id="1_t38ok"]
+[ext_resource type="Script" path="res://Scripts/Input/InputService.cs" id="2_3cfsu"]
 [ext_resource type="Script" path="res://Scripts/SceneManagement/SceneService.cs" id="2_vfyvb"]
 [ext_resource type="PackedScene" uid="uid://d2ghxuc7gvlwp" path="res://Scenes/Gameplay.tscn" id="3_xlexq"]
 
 [node name="Loading" type="Node"]
 
-[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService")]
+[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService", "inputService")]
 script = ExtResource("1_t38ok")
 sceneService = NodePath("../SceneService")
+inputService = NodePath("../InputService")
+
+[node name="InputService" type="Node2D" parent="."]
+script = ExtResource("2_3cfsu")
 
 [node name="SceneService" type="Node" parent="." node_paths=PackedStringArray("sceneRoot")]
 script = ExtResource("2_vfyvb")

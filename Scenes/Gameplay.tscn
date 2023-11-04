@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://d2ghxuc7gvlwp"]
+[gd_scene load_steps=25 format=3 uid="uid://d2ghxuc7gvlwp"]
 
+[ext_resource type="Script" path="res://Scripts/CameraWork/MainCamera.cs" id="1_d3cl2"]
 [ext_resource type="Texture2D" uid="uid://bxapihslnlj1g" path="res://OfficeArt/floor.png" id="1_u1bpu"]
 [ext_resource type="PackedScene" uid="uid://cd8rswp2pwwyw" path="res://Scenes/Envoronment/Table.tscn" id="2_a64fs"]
 [ext_resource type="Texture2D" uid="uid://cfgi5n77atq6g" path="res://OfficeArt/table_wallt.png" id="3_6i2y3"]
@@ -37,6 +38,7 @@ navigation_polygon = SubResource("NavigationPolygon_qjcge")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -3)
 anchor_mode = 0
+script = ExtResource("1_d3cl2")
 
 [node name="SortingParent" type="Node2D" parent="."]
 y_sort_enabled = true

@@ -1,6 +1,7 @@
 using System;
 using Godot;
 using Ingame.FSM;
+using Ingame.Input;
 using Ingame.Resources;
 using Ingame.Service;
 using sperasoftgamejam.Scripts;
@@ -18,6 +19,7 @@ public partial class Worker : CharacterBody2D
 	[Export] private AnimationPlayer animationPlayer;
 
 	private Lazy<ResourcesService> _resourcesService = new(ServiceLocator.Get<ResourcesService>);
+	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
 	
 	public WorkerId WorkerId => workerId;
 	public readonly StateMachine stateMachine = new();
@@ -66,8 +68,13 @@ public partial class Worker : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
-	
-	private void PlayAnimation(AnimationState animationState)
+
+	private void TickFsm(double deltaTime)
+	{
+		stateMachine.CurrentState?.OnTick(deltaTime);
+	}
+
+	public void PlayAnimation(AnimationState animationState)
 	{
 		switch(animationState)
 		{
@@ -87,11 +94,6 @@ public partial class Worker : CharacterBody2D
 				animationPlayer.Play("walk_left");
 				break;
 		}
-	}
-
-	private void TickFsm(double deltaTime)
-	{
-		stateMachine.CurrentState?.OnTick(deltaTime);
 	}
 
 	public void OnPcPointEntered(PcPoint pcPoint)
@@ -130,7 +132,21 @@ public partial class Worker : CharacterBody2D
 		stateMachine.SwitchState(new ReachingPcState(this, _resourcesService.Value.GetPcPoint(workerId)));
 	}
 	
-	private enum AnimationState 
+	public void OnBeingDragged()
+	{
+		if(stateMachine.CurrentState is ReachingPcState reachingPcState)
+		{
+			stateMachine.SwitchState(new BeingDraggedState(this, _inputService.Value, reachingPcState));
+			return;
+		}
+
+		if(stateMachine.CurrentState is ReachingResourceState reachingResourceState)
+		{
+			stateMachine.SwitchState(new BeingDraggedState(this, _inputService.Value, reachingResourceState));
+		}
+	}
+	
+	public enum AnimationState 
 	{
 		Idle,
 		WalkingTop,
