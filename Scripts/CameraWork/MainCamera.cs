@@ -39,6 +39,9 @@ public partial class MainCamera : Camera2D
 
 			if(worker != null)
 			{
+				if(worker.stateMachine.CurrentState is not ReachingPcState && worker.stateMachine.CurrentState is not ReachingResourceState)
+					return;
+				
 				_cursor.Value.SetGrab(true);
 				return;
 			}

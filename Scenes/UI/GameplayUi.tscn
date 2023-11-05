@@ -25,7 +25,7 @@ font_size = 32
 font_color = Color(1, 0, 0.117647, 1)
 
 [node name="UI" type="Control" node_paths=PackedStringArray("projectProgress", "daysLeftLabel", "clockLabel", "alarmSound")]
-z_index = 2
+z_index = 100
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -70,15 +70,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 102.0
-offset_top = 53.0
-offset_right = -96.0
-offset_bottom = -53.0
+offset_left = 104.0
+offset_top = 65.0
+offset_right = -92.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_ujpvb")
 text = "- Atention, Manager! 
-- Our team needs your leadership! Time is running out on this project, and our newbies are struggling with deadlines and self organization! 
+Our team needs your leadership! Time is running out on this project, and our newbies are struggling with deadlines and...
+SELF ORGANIZATION!!! 
+
 Head to the office, rally the team, and get them on track. Success depends on your guidance. Good luck!"
 label_settings = SubResource("LabelSettings_whxq7")
 vertical_alignment = 1
@@ -100,6 +102,7 @@ theme_override_font_sizes/font_size = 76
 text = "NEXT"
 
 [node name="SecondFrame" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

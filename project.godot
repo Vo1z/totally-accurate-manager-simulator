@@ -13,7 +13,13 @@ config_version=5
 config/name="sperasoft-game-jam"
 run/main_scene="res://Scenes/Loading.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
+run/max_fps=144
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="res://OfficeArt/UI/splash.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
+config/windows_native_icon="res://OfficeArt/UI/game_icon.ico"
 
 [display]
 

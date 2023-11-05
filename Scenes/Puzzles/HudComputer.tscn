@@ -24,7 +24,7 @@ font_size = 46
 font_size = 110
 
 [node name="HudComputer" type="Control" node_paths=PackedStringArray("puzzleEventTimer", "kicelPuzzle", "babchaPuzzle", "teamsPuzzle")]
-z_index = 100
+z_index = 4000
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
