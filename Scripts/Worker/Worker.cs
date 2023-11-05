@@ -15,8 +15,8 @@ public partial class Worker : CharacterBody2D
 	private const string WORKER_COLOR_SHADER_PROPERTY = "workerColor";
 	private const float TARGET_POSITION_DELTA = 5f;
 
+	[Export] public WorkerId workerId;
 	[Export] private GameConfig gameConfig;
-	[Export] private WorkerId workerId;
 	[Export] private float walkingSpeed;
 	[Export] private NavigationAgent2D navigationAgent;
 	[Export] private AnimationPlayer animationPlayer;
@@ -28,6 +28,7 @@ public partial class Worker : CharacterBody2D
 	private Lazy<InputService> _inputService = new(ServiceLocator.Get<InputService>);
 	
 	public readonly StateMachine stateMachine = new();
+	public int CurrentSpeedBoost { get; set; } = 0;
 	
 	public Vector2 TargetPosition
 	{
@@ -70,7 +71,7 @@ public partial class Worker : CharacterBody2D
 			PlayAnimation(deltaVector.X > 0 ? AnimationState.WalkingRight : AnimationState.WalkingLeft);
 
 		var direction = deltaVector.Normalized();
-		var velocity = direction * walkingSpeed;
+		var velocity = direction * (walkingSpeed + CurrentSpeedBoost);
 
 		Velocity = velocity;
 		MoveAndSlide();

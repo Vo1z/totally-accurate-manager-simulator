@@ -18,6 +18,7 @@ public partial class KicelPuzzle : TextureRect
 	
 	public void StartPuzzle()
 	{
+		GD.Print("Kicel puzzle started");
 		int firstNumber = RndUtils.Range(1, 100);
 		int secondNumber = RndUtils.Range(1, 100);
 		var operation = RndUtils.RandomEnumValue<Operation>();
@@ -32,14 +33,12 @@ public partial class KicelPuzzle : TextureRect
 			case Operation.Subtraction:
 				_currentCorrectResult = firstNumber - secondNumber;
 				break;
-			case Operation.Multiplication:
-				_currentCorrectResult = firstNumber * secondNumber;
-				break;
 		}
 	}
 
 	private void OnSubmitButtonPressed()
 	{
+		puzzleController.ResetPuzzleTimer();
 		puzzleController.HideMonitor();
 		
 		if(int.TryParse(answer.Text, out int result) && result == _currentCorrectResult)
@@ -52,7 +51,6 @@ public partial class KicelPuzzle : TextureRect
 		{
 			Operation.Addition => "+",
 			Operation.Subtraction => "-",
-			Operation.Multiplication => "*",
 			_ => "+"
 		};
 	}
@@ -60,7 +58,6 @@ public partial class KicelPuzzle : TextureRect
 	private enum Operation
 	{
 		Addition,
-		Subtraction,
-		Multiplication
+		Subtraction
 	}
 }

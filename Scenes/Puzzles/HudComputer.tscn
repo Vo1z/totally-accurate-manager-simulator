@@ -1,0 +1,330 @@
+[gd_scene load_steps=18 format=3 uid="uid://c27i5pmpfr2j6"]
+
+[ext_resource type="Script" path="res://Scripts/Puzzles/PuzzleController.cs" id="1_uwyvu"]
+[ext_resource type="Texture2D" uid="uid://cyop01ujvkixb" path="res://OfficeArt/hud_monitor.png" id="2_1xula"]
+[ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_3i0xr"]
+[ext_resource type="Texture2D" uid="uid://divq34vt03aq4" path="res://OfficeArt/hud_babcha.png" id="3_18ht6"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/BabchaPuzzle.cs" id="4_n64r4"]
+[ext_resource type="Texture2D" uid="uid://bgb7in6x8lbu3" path="res://OfficeArt/hud_teams_call.png" id="5_3cwuw"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/TeamsPuzzle.cs" id="6_ii81t"]
+[ext_resource type="Texture2D" uid="uid://bavydf0u4jehn" path="res://OfficeArt/Faces/face1.png" id="7_u4ydh"]
+[ext_resource type="Texture2D" uid="uid://dryi5t4g26arx" path="res://OfficeArt/hud_kicel.png" id="8_1rdwg"]
+[ext_resource type="Texture2D" uid="uid://h3412w61dan2" path="res://OfficeArt/Faces/face2.png" id="8_oe7lk"]
+[ext_resource type="Script" path="res://Scripts/Puzzles/KicelPuzzle.cs" id="9_6p214"]
+[ext_resource type="Texture2D" uid="uid://cnf7f1geb4q15" path="res://OfficeArt/Faces/face3.png" id="9_rh6u1"]
+[ext_resource type="Texture2D" uid="uid://huns3ssahhw7" path="res://OfficeArt/hud_notebook.png" id="10_365b7"]
+[ext_resource type="Texture2D" uid="uid://bwli7ppe2sxb3" path="res://OfficeArt/Faces/face4.png" id="11_kjg05"]
+[ext_resource type="Texture2D" uid="uid://cwb2gju8deimo" path="res://OfficeArt/Faces/cat.png" id="12_fbq1x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8y7l2"]
+font_size = 46
+
+[sub_resource type="LabelSettings" id="LabelSettings_475qs"]
+font_size = 110
+
+[node name="HudComputer" type="Control" node_paths=PackedStringArray("puzzleEventTimer", "kicelPuzzle", "babchaPuzzle", "teamsPuzzle")]
+z_index = 100
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 584.0
+offset_top = 2219.0
+offset_right = 1444.0
+offset_bottom = 3091.0
+script = ExtResource("1_uwyvu")
+gameConfig = ExtResource("2_3i0xr")
+puzzleEventTimer = NodePath("Timer")
+kicelPuzzle = NodePath("ComputerMonitor/KicelPuzzle")
+babchaPuzzle = NodePath("ComputerMonitor/BabchaPuzzle")
+teamsPuzzle = NodePath("ComputerMonitor/TeamsPuzzle")
+showHideAnimationDuration = 1.0
+showPos = Vector2(584, 140)
+hidePos = Vector2(584, 2737)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -1286.0
+offset_top = -1025.0
+offset_right = 2360.0
+offset_bottom = 1338.0
+color = Color(0, 0, 0, 0.392157)
+
+[node name="ComputerMonitor" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -482.0
+offset_top = 4.0
+offset_right = -482.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1xula")
+stretch_mode = 5
+
+[node name="BabchaPuzzle" type="TextureRect" parent="ComputerMonitor" node_paths=PackedStringArray("puzzleController", "gridContainer", "buttons")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.023
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.145999
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("3_18ht6")
+script = ExtResource("4_n64r4")
+puzzleController = NodePath("../..")
+gridContainer = NodePath("GridContainer")
+buttons = [NodePath("GridContainer/Button1"), NodePath("GridContainer/Button2"), NodePath("GridContainer/Button3"), NodePath("GridContainer/Button4"), NodePath("GridContainer/Button5"), NodePath("GridContainer/Button6"), NodePath("GridContainer/Button7"), NodePath("GridContainer/Button8"), NodePath("GridContainer/Button9")]
+
+[node name="GridContainer" type="GridContainer" parent="ComputerMonitor/BabchaPuzzle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.349
+offset_top = -120.299
+offset_right = 73.651
+offset_bottom = 170.701
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="Button1" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "1"
+
+[node name="Button2" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="Button3" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "3"
+
+[node name="Button4" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "4"
+
+[node name="Button5" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "5
+"
+
+[node name="Button6" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "6"
+
+[node name="Button7" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "7"
+
+[node name="Button8" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "8
+"
+
+[node name="Button9" type="Button" parent="ComputerMonitor/BabchaPuzzle/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "9
+"
+
+[node name="TeamsPuzzle" type="TextureRect" parent="ComputerMonitor" node_paths=PackedStringArray("puzzleController", "callerAvatarTextureRect", "callerNameLabel")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.023
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.145999
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("5_3cwuw")
+script = ExtResource("6_ii81t")
+puzzleController = NodePath("../..")
+callerAvatarTextureRect = NodePath("CallerAvatar")
+callerNameLabel = NodePath("CallerLabel")
+clientTexture = ExtResource("8_oe7lk")
+hrTexture = ExtResource("9_rh6u1")
+bossTexture = ExtResource("7_u4ydh")
+juniorTexture = ExtResource("11_kjg05")
+catTexture = ExtResource("12_fbq1x")
+
+[node name="Accept" type="Button" parent="ComputerMonitor/TeamsPuzzle"]
+modulate = Color(0.117647, 1, 0.164706, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 184.0
+offset_top = -116.194
+offset_right = 297.0
+offset_bottom = -58.1939
+grow_vertical = 0
+text = "Accept"
+
+[node name="Decline" type="Button" parent="ComputerMonitor/TeamsPuzzle"]
+modulate = Color(1, 0.0901961, 0.223529, 1)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -337.076
+offset_top = -118.194
+offset_right = -219.076
+offset_bottom = -58.1939
+grow_horizontal = 0
+grow_vertical = 0
+text = "Decline"
+
+[node name="CallerLabel" type="Label" parent="ComputerMonitor/TeamsPuzzle"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 332.0
+offset_right = 500.0
+offset_bottom = 399.0
+text = "Caller"
+label_settings = SubResource("LabelSettings_8y7l2")
+horizontal_alignment = 1
+
+[node name="CallerAvatar" type="TextureRect" parent="ComputerMonitor/TeamsPuzzle"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.349
+offset_top = -127.299
+offset_right = 44.651
+offset_bottom = -1.29895
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_u4ydh")
+
+[node name="KicelPuzzle" type="TextureRect" parent="ComputerMonitor" node_paths=PackedStringArray("puzzleController", "formulaLabel", "answer")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.02
+anchor_right = 0.986
+anchor_bottom = 0.654
+offset_left = 0.00199986
+offset_top = 0.0399995
+offset_right = 0.115967
+offset_bottom = 0.107986
+texture = ExtResource("8_1rdwg")
+script = ExtResource("9_6p214")
+puzzleController = NodePath("../..")
+formulaLabel = NodePath("Label")
+answer = NodePath("TextEdit")
+
+[node name="Label" type="Label" parent="ComputerMonitor/KicelPuzzle"]
+layout_mode = 0
+offset_left = 38.378
+offset_top = 198.52
+offset_right = 541.378
+offset_bottom = 352.52
+text = "12 + 44 ="
+label_settings = SubResource("LabelSettings_475qs")
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="ComputerMonitor/KicelPuzzle"]
+layout_mode = 0
+offset_left = 571.378
+offset_top = 247.52
+offset_right = 731.378
+offset_bottom = 328.52
+placeholder_text = "ANSWER"
+
+[node name="Submit" type="Button" parent="ComputerMonitor/KicelPuzzle"]
+modulate = Color(0, 0.878431, 0, 1)
+layout_mode = 0
+offset_left = 254.378
+offset_top = 411.52
+offset_right = 557.378
+offset_bottom = 489.52
+theme_override_font_sizes/font_size = 51
+text = "SUBMIT"
+
+[node name="Notebook" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 416.0
+offset_right = 1327.0
+offset_bottom = 892.0
+texture = ExtResource("10_365b7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Notebook"]
+offset_left = 50.0
+offset_top = 35.0
+offset_right = 425.0
+offset_bottom = 435.0
+theme_override_colors/font_color = Color(0.176471, 0.176471, 0, 1)
+text = "Important calls:
+- BOSS
+- HR
+- CLIENT
+
+TODO:
+- Budget planning
+
+Important notice:
+- IT infrastructure will be restarted a few times
+during the week due to maintenance work,
+so we will need to log in to the system again"
+
+[node name="Label2" type="Label" parent="Notebook"]
+offset_left = 540.0
+offset_top = 22.0
+offset_right = 905.0
+offset_bottom = 435.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "MEETING NOTES:
+IT infrastructure changes:
+-   Now we will have to complete BABCHA 
+    each time we log in to protect systems 
+    form the bots.
+-   To complete BABCHA, we have to select 
+    numbers in order from 1 to 9
+
+Budget planning:
+-   All calculations are done for us, 
+    we just need to fill the finall cell by completing
+    simple math operation."
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button1" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed1"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button2" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed2"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button3" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed3"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button4" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed4"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button5" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed5"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button6" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed6"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button7" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed7"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button8" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed8"]
+[connection signal="pressed" from="ComputerMonitor/BabchaPuzzle/GridContainer/Button9" to="ComputerMonitor/BabchaPuzzle" method="OnButtonPressed9"]
+[connection signal="pressed" from="ComputerMonitor/TeamsPuzzle/Accept" to="ComputerMonitor/TeamsPuzzle" method="OnAcceptPressed"]
+[connection signal="pressed" from="ComputerMonitor/TeamsPuzzle/Decline" to="ComputerMonitor/TeamsPuzzle" method="OnDeclinePressed"]
+[connection signal="pressed" from="ComputerMonitor/KicelPuzzle/Submit" to="ComputerMonitor/KicelPuzzle" method="OnSubmitButtonPressed"]
+[connection signal="timeout" from="Timer" to="." method="OnPuzzleEventTimeout"]

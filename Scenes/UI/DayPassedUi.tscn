@@ -8,7 +8,7 @@ font_size = 176
 [sub_resource type="LabelSettings" id="LabelSettings_n6pku"]
 font_size = 76
 
-[node name="DayPassedUi" type="Control"]
+[node name="DayPassedUi" type="Control" node_paths=PackedStringArray("daysLeftLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m718y")
+daysLeftLabel = NodePath("Deadline")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

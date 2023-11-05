@@ -24,7 +24,9 @@ public partial class TeamsPuzzle : TextureRect
 	
 	public void StartPuzzle()
 	{
+		GD.Print("Teams puzzle started");
 		var caller = RndUtils.RandomEnumValue<Caller>();
+		GD.Print($"Caller: {caller}");
 		var callerTexture = GetCallerTexture(caller);
 		string callerName = GetCallerName(caller);
 
@@ -36,6 +38,7 @@ public partial class TeamsPuzzle : TextureRect
 	private void OnAcceptPressed()
 	{
 		puzzleController.HideMonitor();
+		puzzleController.ResetPuzzleTimer();
 		
 		if(_currentCaller == null)
 			return;
@@ -46,6 +49,7 @@ public partial class TeamsPuzzle : TextureRect
 	
 	private void OnDeclinePressed()
 	{
+		puzzleController.ResetPuzzleTimer();
 		puzzleController.HideMonitor();
 		
 		if(_currentCaller == null)

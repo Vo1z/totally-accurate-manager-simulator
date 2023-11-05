@@ -15,17 +15,17 @@ public static class RndUtils
 	
 	public static float Range(float from, float to)
 	{
-		return _randomNumberGenerator.RandfRange(from, to);
+		return _randomNumberGenerator.RandfRange(from, to - 1);
 	}
 	
 	public static int Range(int from, int to)
 	{
-		return _randomNumberGenerator.RandiRange(from, to);
+		return _randomNumberGenerator.RandiRange(from, to - 1);
 	}
 
 	public static float Range(Vector2 range)
 	{
-		return Range(range.X, range.Y);
+		return Range(range.X, range.Y - 1);
 	}
 
 	public static T RandomEnumValue<T>() where T : Enum
