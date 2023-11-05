@@ -5,5 +5,6 @@ public enum SceneType
 	MainMenu,
 	Gameplay,
 	DayPassed,
-	GameOver
+	GameOver,
+	IntroScene
 }

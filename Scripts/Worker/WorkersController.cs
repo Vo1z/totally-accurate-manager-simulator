@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Godot;
 using Ingame.GameSession;
 using Ingame.Service;
+using Ingame.Utils;
 
 namespace Ingame.Npc;
 
@@ -12,7 +13,8 @@ public partial class WorkersController : Node2D
 	
 	[Export] private PackedScene workerScene;
 	[Export] private Node2D workerSpawnPoint;
-	
+	[Export] private float maxSpawnOffset;
+
 	private readonly Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
 	private readonly List<Worker> _spawnedWorkers = new();
 	
@@ -42,12 +44,14 @@ public partial class WorkersController : Node2D
 		{
 			var workerId = (WorkerId) _spawnedWorkers.Count;
 			var workerInstance = workerScene.Instantiate<Worker>();
+			var spawnPosition = workerSpawnPoint.GlobalPosition;
+			spawnPosition.X += RndUtils.Range(-maxSpawnOffset, maxSpawnOffset);
 			workerInstance.workerId = workerId;
 			
 			_spawnedWorkers.Add(workerInstance);
 			
 			AddChild(workerInstance);
-			workerInstance.GlobalPosition = workerSpawnPoint.GlobalPosition;
+			workerInstance.GlobalPosition = spawnPosition;
 		}
 	}
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2ghxuc7gvlwp"]
+[gd_scene load_steps=34 format=3 uid="uid://d2ghxuc7gvlwp"]
 
 [ext_resource type="Script" path="res://Scripts/CameraWork/MainCamera.cs" id="1_d3cl2"]
 [ext_resource type="Texture2D" uid="uid://bxapihslnlj1g" path="res://OfficeArt/floor.png" id="1_u1bpu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cfgi5n77atq6g" path="res://OfficeArt/table_wallt.png" id="3_6i2y3"]
 [ext_resource type="Texture2D" uid="uid://dklrvkiv3svwh" path="res://OfficeArt/book.png" id="4_4gmkw"]
 [ext_resource type="Texture2D" uid="uid://b8yybu5d8ft7x" path="res://OfficeArt/wall.png" id="4_fi3vw"]
+[ext_resource type="Texture2D" uid="uid://c3fxcewqkmrwe" path="res://OfficeArt/paper.png" id="5_qsf3c"]
 [ext_resource type="Texture2D" uid="uid://cnb3rbnj8ijdc" path="res://OfficeArt/door.png" id="5_qtnt3"]
 [ext_resource type="Texture2D" uid="uid://l41xmi7rvrls" path="res://OfficeArt/side_wall.png" id="7_acr7i"]
 [ext_resource type="Texture2D" uid="uid://df5a1osho52k2" path="res://OfficeArt/wall_front_cut.png" id="8_pilli"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://i2wqk22gt31n" path="res://OfficeArt/sofa.png" id="10_2sfx6"]
 [ext_resource type="Texture2D" uid="uid://ovqhegxea20e" path="res://OfficeArt/table.png" id="11_uaftv"]
 [ext_resource type="Texture2D" uid="uid://dykdtqesbdeko" path="res://OfficeArt/table-tall.png" id="12_44rla"]
+[ext_resource type="Texture2D" uid="uid://doc2vmkrhswco" path="res://OfficeArt/bush.png" id="12_ledqm"]
 [ext_resource type="Texture2D" uid="uid://dy8vswy37k6ou" path="res://OfficeArt/cofee.png" id="13_gmjls"]
 [ext_resource type="Texture2D" uid="uid://4sqw4tvgntr0" path="res://OfficeArt/vending_machine.png" id="14_jmj4k"]
 [ext_resource type="Texture2D" uid="uid://8cmw5w0ff7ts" path="res://OfficeArt/book_shelve.png" id="15_5wp23"]
@@ -29,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://0i86ip7xbp7o" path="res://Scenes/UI/GameplayUi.tscn" id="27_6x3js"]
 [ext_resource type="PackedScene" uid="uid://c27i5pmpfr2j6" path="res://Scenes/Puzzles/HudComputer.tscn" id="28_gyesr"]
 [ext_resource type="AudioStream" uid="uid://d1fnppl2lfnb8" path="res://Audio/gameplay_music.mp3" id="29_00aam"]
+[ext_resource type="Texture2D" uid="uid://bmtn8xnl8d4r7" path="res://OfficeArt/wall_picture.png" id="32_t14xb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qjcge"]
 vertices = PackedVector2Array(1910, 276, 1917, 1065, 1885, 1062, 1884, 1008, 1563, 1010, 1562, 1056, 1506, 1051, 1510, 1010, 1174, 1055, 1080, 1055, 1083, 1005, 1175, 1005, 983, 857, 982, 769, 1090, 774, 1085, 858, 1791, 859, 1786, 772, 1881, 772, 1881, 864, 830, 780, 832, 862, 763, 860, 760, 780, 764, 656, 831, 654, 830, 714, 759, 716, 663, 684, 1651, 774, 1658, 860, 1559, 864, 1569, 773, -5, 309, -6, 273, 166, 275, 104, 314, 169, 337, 100, 376, 294, 377, 286, 343, 1791, 1004, 1788, 916, 1882, 916, 1879, 718, 1878, 629, 1879, 577, 1406, 1000, 1404, 914, 1506, 915, 1164, 771, 1263, 775, 1268, 855, 1172, 858, 345.159, 1064.35, 290, 1065, 295, 788, 388, 787, 542, 786, 545, 1062, 444, 785, 830, 928, 831, 1008, 766, 1007, 767, 926, 976, 276, 1686, 287, 1683, 357, 1294, 364, 992, 312, 1787, 716, 1790, 627, 1800, 277, 1802, 490, 1298, 488, 1561, 579, 1501, 574, 822, 313, 822, 275, 996, 359, 1211, 367, 1211, 488, 285, 224, 698, 220, 700, 489, 367, 675, 294, 620, 448, 673, 176, 1099, -6, 1099, -7, 551, 181, 551, 183, 618, 184, 673, 765, 1075, 664, 1074, 1507, 862, 1404, 859, 1405, 773, 1509, 771, 1565, 631, 1653, 633, 1656, 717, 1569, 722, 1514, 716, 980, 997, 984, 921, 1081, 917, 1408, 712, 1408, 632, 1502, 627, 1267, 714, 1161, 724, 1086, 724, 983, 714, 982, 630, 1097, 624, 1173, 625, 1266, 631, 1175, 912, 1267, 918, 1265, 999, 1565, 913, 1654, 915, 1656, 1000, 1171, 580, 1095, 575, 763, 571)
@@ -2230,6 +2233,13 @@ scale = Vector2(0.7, 0.7)
 position = Vector2(274.477, 15.6185)
 scale = Vector2(1.6, 1.6)
 
+[node name="Flag" type="Sprite2D" parent="SortingParent/TablesRow/Table7"]
+modulate = Color(1, 0.345098, 0.278431, 1)
+texture_filter = 1
+position = Vector2(-98.0063, -21.804)
+scale = Vector2(0.283646, 0.299744)
+texture = ExtResource("5_qsf3c")
+
 [node name="BookRed" type="Sprite2D" parent="SortingParent/TablesRow/Table7"]
 modulate = Color(0.952941, 0.243137, 0, 1)
 texture_filter = 1
@@ -2244,6 +2254,13 @@ scale = Vector2(1.6, 1.6)
 [node name="Table9" parent="SortingParent/TablesRow" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 432)
 scale = Vector2(1.6, 1.6)
+
+[node name="Flag2" type="Sprite2D" parent="SortingParent/TablesRow/Table9"]
+modulate = Color(0.694118, 0.588235, 0.333333, 1)
+texture_filter = 1
+position = Vector2(70.1692, -27.6624)
+scale = Vector2(0.283646, 0.299745)
+texture = ExtResource("5_qsf3c")
 
 [node name="TableWallt2" type="Sprite2D" parent="SortingParent/TablesRow/Table9"]
 texture_filter = 1
@@ -2271,6 +2288,13 @@ scale = Vector2(1.6, 1.6)
 position = Vector2(275, 224)
 scale = Vector2(1.6, 1.6)
 
+[node name="Flag4" type="Sprite2D" parent="SortingParent/TablesRow2/Table8"]
+modulate = Color(0.223529, 0.352941, 0.831373, 1)
+texture_filter = 1
+position = Vector2(-116.124, -23.9438)
+scale = Vector2(0.283646, 0.299745)
+texture = ExtResource("5_qsf3c")
+
 [node name="BookBlue" type="Sprite2D" parent="SortingParent/TablesRow2/Table8"]
 modulate = Color(0.266667, 0.423529, 1, 1)
 texture_filter = 1
@@ -2294,6 +2318,13 @@ texture_filter = 1
 position = Vector2(10.2527, -14.0347)
 scale = Vector2(2, 2)
 texture = ExtResource("4_4gmkw")
+
+[node name="Flag3" type="Sprite2D" parent="SortingParent/TablesRow2/Table9"]
+modulate = Color(0.831373, 0.831373, 0, 1)
+texture_filter = 1
+position = Vector2(57.5366, -24.0282)
+scale = Vector2(0.283646, 0.299745)
+texture = ExtResource("5_qsf3c")
 
 [node name="TablesRow3" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
@@ -2321,6 +2352,20 @@ texture_filter = 1
 position = Vector2(-58.7867, 67.8148)
 scale = Vector2(-2, 2)
 texture = ExtResource("4_4gmkw")
+
+[node name="Flag5" type="Sprite2D" parent="SortingParent/TablesRow3/Table8"]
+modulate = Color(0.27451, 0.282353, 0.266667, 1)
+texture_filter = 1
+position = Vector2(-112.948, -21.2182)
+scale = Vector2(0.283646, 0.299745)
+texture = ExtResource("5_qsf3c")
+
+[node name="Flag6" type="Sprite2D" parent="SortingParent/TablesRow3/Table8"]
+modulate = Color(0.760784, 0, 0.760784, 1)
+texture_filter = 1
+position = Vector2(64.1514, -21.2184)
+scale = Vector2(0.283646, 0.299745)
+texture = ExtResource("5_qsf3c")
 
 [node name="Table9" parent="SortingParent/TablesRow3" instance=ExtResource("2_a64fs")]
 position = Vector2(275, 432)
@@ -2470,6 +2515,34 @@ rotation = 3.14159
 scale = Vector2(3, -3)
 texture = ExtResource("9_jmi1a")
 
+[node name="Bush" type="Sprite2D" parent="SortingParent/LeftRooms"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(490.102, 206.557)
+scale = Vector2(4.05782, 4.28813)
+texture = ExtResource("12_ledqm")
+
+[node name="Bush2" type="Sprite2D" parent="SortingParent/LeftRooms"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(422.701, 208.592)
+scale = Vector2(4.05782, 4.28813)
+texture = ExtResource("12_ledqm")
+
+[node name="Bush3" type="Sprite2D" parent="SortingParent/LeftRooms"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1034.12, 220.802)
+scale = Vector2(4.05782, 4.28813)
+texture = ExtResource("12_ledqm")
+
+[node name="Bush4" type="Sprite2D" parent="SortingParent/LeftRooms"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(1126.56, 220.802)
+scale = Vector2(4.05782, 4.28813)
+texture = ExtResource("12_ledqm")
+
 [node name="Door" type="Node2D" parent="SortingParent"]
 y_sort_enabled = true
 position = Vector2(-203, -38)
@@ -2522,9 +2595,9 @@ texture = ExtResource("7_acr7i")
 [node name="SideWall13" type="Sprite2D" parent="SortingParent/Kitchen"]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(797, 294)
+position = Vector2(797, 293.76)
 rotation = 3.14159
-scale = Vector2(3, -3)
+scale = Vector2(3, -3.00668)
 texture = ExtResource("7_acr7i")
 
 [node name="SideWall14" type="Sprite2D" parent="SortingParent/Kitchen"]
@@ -2655,6 +2728,7 @@ scale = Vector2(0.768002, 0.768002)
 texture = ExtResource("26_k7nvb")
 
 [node name="Sofa" type="Sprite2D" parent="SortingParent/ManagerRoom/Table"]
+modulate = Color(1, 0.678431, 0.505882, 1)
 position = Vector2(1.28001, -35.52)
 scale = Vector2(1.664, 1.664)
 texture = ExtResource("10_2sfx6")
@@ -2692,6 +2766,7 @@ y_sort_enabled = true
 script = ExtResource("24_cir5x")
 workerScene = ExtResource("20_oxbjs")
 workerSpawnPoint = NodePath("SpawnPoint")
+maxSpawnOffset = 50.0
 
 [node name="SpawnPoint" type="Node2D" parent="SortingParent/Workers"]
 position = Vector2(602.758, 221.819)
@@ -2768,3 +2843,9 @@ workerId = 3
 stream = ExtResource("29_00aam")
 volume_db = -10.0
 autoplay = true
+
+[node name="WallPicture" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(984, 86)
+scale = Vector2(11.4375, 11.4375)
+texture = ExtResource("32_t14xb")

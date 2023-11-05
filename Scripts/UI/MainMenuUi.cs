@@ -14,6 +14,11 @@ public partial class MainMenuUi : Control
 	private void OnPlayButtonPressed()
 	{
 		_audioService.Value.PlaySound(AudioClip.UiClick);
-		_gameSessionService.Value.LoadScene(SceneType.Gameplay);
+		_gameSessionService.Value.LoadScene(SceneType.IntroScene);
+	}
+
+	private void OnExitButtonPressed()
+	{
+		GetTree().Quit();
 	}
 }

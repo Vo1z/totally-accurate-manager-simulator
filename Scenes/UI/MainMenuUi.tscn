@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs54g6dhv3sf3"]
+[gd_scene load_steps=4 format=3 uid="uid://bs54g6dhv3sf3"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenuUi.cs" id="1_b7qb0"]
 [ext_resource type="AudioStream" uid="uid://bwstm33ipdrxl" path="res://Audio/main_menu_music.mp3" id="2_302mm"]
+[ext_resource type="Texture2D" uid="uid://hplj8hf1nyib" path="res://OfficeArt/UI/intro-office-bg.png" id="2_bhd7i"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,7 +13,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b7qb0")
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bhd7i")
+
+[node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,8 +38,25 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 56
 text = "PLAY"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = 83.0
+offset_right = 180.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+text = "EXIT"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_302mm")
 autoplay = true
 
-[connection signal="pressed" from="Button" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="Play" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="Button" to="." method="OnExitButtonPressed"]

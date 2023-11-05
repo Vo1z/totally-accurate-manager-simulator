@@ -1,0 +1,171 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2scp08gtau8u"]
+
+[ext_resource type="Script" path="res://Scripts/UI/IntroUi.cs" id="1_7hm61"]
+[ext_resource type="Texture2D" uid="uid://c6066iyv2kykv" path="res://OfficeArt/Faces/boss-body.png" id="1_y20bt"]
+[ext_resource type="Texture2D" uid="uid://cjsuab5k82poe" path="res://OfficeArt/UI/dialog_box.png" id="2_evesx"]
+[ext_resource type="Texture2D" uid="uid://hplj8hf1nyib" path="res://OfficeArt/UI/intro-office-bg.png" id="3_3rkjo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_whxq7"]
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[node name="Intro" type="Control" node_paths=PackedStringArray("firstFrame", "secondFrame")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7hm61")
+firstFrame = NodePath("FirstFrame")
+secondFrame = NodePath("SecondFrame")
+
+[node name="FirstFrame" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect3" type="TextureRect" parent="FirstFrame"]
+modulate = Color(0.384314, 0.384314, 0.384314, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3rkjo")
+
+[node name="TextureRect" type="TextureRect" parent="FirstFrame"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -781.0
+offset_top = -781.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.00439, 1)
+texture = ExtResource("1_y20bt")
+
+[node name="TextureRect2" type="TextureRect" parent="FirstFrame"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 50.0
+offset_right = 1094.0
+offset_bottom = 572.0
+texture = ExtResource("2_evesx")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="FirstFrame/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 102.0
+offset_top = 53.0
+offset_right = -96.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "- Atention, Manager! 
+- Our team needs your leadership! Time is running out on this project, and our newbies are struggling with deadlines and self organization! 
+Head to the office, rally the team, and get them on track. Success depends on your guidance. Good luck!"
+label_settings = SubResource("LabelSettings_whxq7")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="FirstFrame"]
+modulate = Color(0.105882, 0.784314, 0, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = -263.0
+offset_right = 866.0
+offset_bottom = -141.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 76
+text = "NEXT"
+
+[node name="SecondFrame" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect4" type="TextureRect" parent="SecondFrame"]
+modulate = Color(0.384314, 0.384314, 0.384314, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3rkjo")
+
+[node name="TextureRect" type="TextureRect" parent="SecondFrame"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -781.0
+offset_top = -781.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.00439, 1)
+texture = ExtResource("1_y20bt")
+
+[node name="TextureRect2" type="TextureRect" parent="SecondFrame"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 50.0
+offset_right = 1094.0
+offset_bottom = 572.0
+texture = ExtResource("2_evesx")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SecondFrame/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 102.0
+offset_top = 93.0
+offset_right = -96.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1. Drag and drop workers to minimize their traveling
+2. Speedup routine processes
+3. Complete other management work to get benefits"
+label_settings = SubResource("LabelSettings_whxq7")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="SecondFrame"]
+modulate = Color(0.105882, 0.784314, 0, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -633.0
+offset_top = 43.0
+offset_right = -23.0
+offset_bottom = 165.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 76
+text = "MOVE OUT!"
+
+[connection signal="pressed" from="FirstFrame/Button" to="." method="OnFirstButtonPressed"]
+[connection signal="pressed" from="SecondFrame/Button" to="." method="OnSecondButtonPressed"]

@@ -7,6 +7,7 @@ namespace Ingame.SceneManagement;
 public partial class SceneService : Node, IGameService
 {
 	[Export] private PackedScene mainMenuScene;
+	[Export] private PackedScene introScene;
 	[Export] private PackedScene gameplayScene;
 	[Export] private PackedScene daysPassedScene;
 	[Export] private PackedScene gameOverScene;
@@ -26,6 +27,7 @@ public partial class SceneService : Node, IGameService
 		_currentScene = sceneType switch
 		{
 			SceneType.MainMenu => mainMenuScene.Instantiate(),
+			SceneType.IntroScene => introScene.Instantiate(),
 			SceneType.Gameplay => gameplayScene.Instantiate(),
 			SceneType.DayPassed => daysPassedScene.Instantiate(),
 			SceneType.GameOver => gameOverScene.Instantiate(),

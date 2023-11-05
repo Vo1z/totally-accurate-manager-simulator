@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://kfk57lbnt744"]
+[gd_scene load_steps=13 format=3 uid="uid://kfk57lbnt744"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoading/GameLoader.cs" id="1_t38ok"]
 [ext_resource type="Script" path="res://Scripts/Input/InputService.cs" id="2_3cfsu"]
@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://d2ghxuc7gvlwp" path="res://Scenes/Gameplay.tscn" id="3_xlexq"]
 [ext_resource type="PackedScene" uid="uid://bs54g6dhv3sf3" path="res://Scenes/UI/MainMenuUi.tscn" id="5_17h06"]
 [ext_resource type="PackedScene" uid="uid://ddwdu6iolsfet" path="res://Scenes/UI/DayPassedUi.tscn" id="6_jubv6"]
+[ext_resource type="PackedScene" uid="uid://d2scp08gtau8u" path="res://Scenes/Intro.tscn" id="6_o8cjg"]
 [ext_resource type="PackedScene" uid="uid://b0pplsuj0ycwn" path="res://Scenes/UI/GameOverUi.tscn" id="8_mt5xw"]
 [ext_resource type="Script" path="res://Scripts/Audio/AudioService.cs" id="9_55hb4"]
 [ext_resource type="AudioStream" uid="uid://dkb3fq8o6sp3k" path="res://Audio/ui_click.wav" id="10_0i1vo"]
+[ext_resource type="AudioStream" uid="uid://3igovtr75m40" path="res://Audio/end_of_the_day.wav" id="11_ltu8w"]
 
 [node name="Loading" type="Node"]
 
@@ -26,6 +28,7 @@ script = ExtResource("2_3cfsu")
 [node name="SceneService" type="Node" parent="." node_paths=PackedStringArray("sceneRoot")]
 script = ExtResource("2_vfyvb")
 mainMenuScene = ExtResource("5_17h06")
+introScene = ExtResource("6_o8cjg")
 gameplayScene = ExtResource("3_xlexq")
 daysPassedScene = ExtResource("6_jubv6")
 gameOverScene = ExtResource("8_mt5xw")
@@ -33,9 +36,13 @@ sceneRoot = NodePath("../SceneRoot")
 
 [node name="SceneRoot" type="Node" parent="."]
 
-[node name="AudioService" type="Node" parent="." node_paths=PackedStringArray("uiClick")]
+[node name="AudioService" type="Node" parent="." node_paths=PackedStringArray("uiClick", "cinematic")]
 script = ExtResource("9_55hb4")
-uiClick = NodePath("AudioStreamPlayer")
+uiClick = NodePath("Click")
+cinematic = NodePath("Cinematic")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioService"]
+[node name="Click" type="AudioStreamPlayer" parent="AudioService"]
 stream = ExtResource("10_0i1vo")
+
+[node name="Cinematic" type="AudioStreamPlayer" parent="AudioService"]
+stream = ExtResource("11_ltu8w")
