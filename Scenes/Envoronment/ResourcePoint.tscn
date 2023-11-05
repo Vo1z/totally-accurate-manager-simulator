@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://yd7sxl4u0eec"]
+[gd_scene load_steps=7 format=3 uid="uid://yd7sxl4u0eec"]
 
 [ext_resource type="Script" path="res://Scripts/Resources/ResourcePoint.cs" id="1_b7yss"]
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_i7q31"]
+[ext_resource type="FontFile" uid="uid://dbnh8a20ef3ni" path="res://OfficeArt/Font/PixelifySans-Regular.ttf" id="3_1cafp"]
+[ext_resource type="Texture2D" uid="uid://bm1t880vybpr" path="res://OfficeArt/Particles/hurry.png" id="4_04vdx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxah"]
 size = Vector2(48.1328, 46.0169)
 
-[node name="ResourcePoint" type="Node2D" node_paths=PackedStringArray("progressBar", "speedUpButton")]
+[sub_resource type="Curve" id="Curve_2uo33"]
+_data = [Vector2(0.00892857, 0), 0.0, 0.0, 0, 0, Vector2(0.245536, 0.871287), 0.0, 0.0, 0, 0, Vector2(0.904018, 0.80198), -1.07894, -1.07894, 0, 0, Vector2(1, 0.029703), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="ResourcePoint" type="Node2D" node_paths=PackedStringArray("particles", "progressBar", "speedUpButton")]
 script = ExtResource("1_b7yss")
 gameConfig = ExtResource("2_i7q31")
+particles = NodePath("CPUParticles2D")
 progressBar = NodePath("UI/ProgressBar")
 speedUpButton = NodePath("UI/Button")
 
@@ -27,7 +34,8 @@ offset_left = -57.0
 offset_top = 5.0
 offset_right = 66.0
 offset_bottom = 36.0
-text = "Speed up!"
+theme_override_fonts/font = ExtResource("3_1cafp")
+text = "SPEED UP!"
 
 [node name="ProgressBar" type="ProgressBar" parent="UI"]
 texture_filter = 1
@@ -35,8 +43,35 @@ offset_left = -92.0
 offset_top = -27.0
 offset_right = 100.0
 scale = Vector2(0.997776, 1.00131)
+theme_override_fonts/font = ExtResource("3_1cafp")
 max_value = 1.0
 value = 0.1
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = 1
+position = Vector2(0, -153)
+emitting = false
+amount = 4
+lifetime = 0.5
+speed_scale = 0.44
+draw_order = 1
+texture = ExtResource("4_04vdx")
+emission_shape = 1
+emission_sphere_radius = 27.31
+direction = Vector2(1, 1)
+gravity = Vector2(100, -1000)
+initial_velocity_min = 35.56
+initial_velocity_max = 92.33
+angular_velocity_min = 10.0
+angular_velocity_max = 200.0
+scale_amount_min = 3.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_2uo33")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
 [connection signal="body_entered" from="ResourceTrigger" to="." method="OnBodyEntered"]
 [connection signal="pressed" from="UI/Button" to="." method="OnSpeedUpButtonPressed"]
+[connection signal="timeout" from="Timer" to="." method="OnParticlesTurnOffTimerTimeout"]

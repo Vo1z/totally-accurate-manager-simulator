@@ -14,8 +14,8 @@ public sealed class GameSessionService : IGameService
 	private readonly SceneService _sceneService;
 	private readonly GameConfig _gameConfig;
 	
-	private int _currentProjectProgress;
-	private int _targetProjectProgress;
+	public int CurrentProjectProgress { get; private set; }
+	public int TargetProjectProgress { get; private set; }
 
 	public int CurrentWorkerSpeedBoost { get; private set; }
 	public int CurrentAmountOfWorkers { get; private set; }
@@ -49,15 +49,15 @@ public sealed class GameSessionService : IGameService
 		DaysLeft = _gameConfig.daysToCompleteProject;
 		CurrentState = GameSessionState.None;
 		
-		_currentProjectProgress = 0;
-		_targetProjectProgress = _gameConfig.amountOfWorkToBeDone;
+		CurrentProjectProgress = 0;
+		TargetProjectProgress = _gameConfig.amountOfWorkToBeDone;
 	}
 	
 	public void SkipDay()
 	{
 		DaysLeft--;
 		
-		OnGameProgressChanged?.Invoke(_currentProjectProgress / (float) _targetProjectProgress, DaysLeft);
+		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
 
 		if(DaysLeft > 0)
 		{
@@ -71,11 +71,11 @@ public sealed class GameSessionService : IGameService
 	
 	public void ContributeToProjectProgress(int amount)
 	{
-		_currentProjectProgress += amount;
+		CurrentProjectProgress += amount;
 		
-		OnGameProgressChanged?.Invoke(_currentProjectProgress / (float) _targetProjectProgress, DaysLeft);
+		OnGameProgressChanged?.Invoke(CurrentProjectProgress / (float) TargetProjectProgress, DaysLeft);
 
-		if(_currentProjectProgress < _targetProjectProgress)
+		if(CurrentProjectProgress < TargetProjectProgress)
 			return;
 		
 		CurrentState = GameSessionState.EndedWithVictory;

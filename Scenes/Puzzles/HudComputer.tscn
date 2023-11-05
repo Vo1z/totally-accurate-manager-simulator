@@ -44,10 +44,11 @@ hidePos = Vector2(584, 2737)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -1286.0
-offset_top = -1025.0
-offset_right = 2360.0
-offset_bottom = 1338.0
+offset_left = -11155.0
+offset_top = -7605.0
+offset_right = 12229.0
+offset_bottom = 5894.0
+mouse_filter = 2
 color = Color(0, 0, 0, 0.392157)
 
 [node name="ComputerMonitor" type="TextureRect" parent="."]

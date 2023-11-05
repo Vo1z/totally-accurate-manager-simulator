@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kfk57lbnt744"]
+[gd_scene load_steps=15 format=3 uid="uid://kfk57lbnt744"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoading/GameLoader.cs" id="1_t38ok"]
 [ext_resource type="Script" path="res://Scripts/Input/InputService.cs" id="2_3cfsu"]
@@ -12,15 +12,18 @@
 [ext_resource type="Script" path="res://Scripts/Audio/AudioService.cs" id="9_55hb4"]
 [ext_resource type="AudioStream" uid="uid://dkb3fq8o6sp3k" path="res://Audio/ui_click.wav" id="10_0i1vo"]
 [ext_resource type="AudioStream" uid="uid://3igovtr75m40" path="res://Audio/end_of_the_day.wav" id="11_ltu8w"]
+[ext_resource type="Texture2D" uid="uid://dmb68ivc08mgb" path="res://OfficeArt/UI/hand_take.png" id="13_cdh1e"]
+[ext_resource type="Script" path="res://Scripts/Cursor.cs" id="14_yxeox"]
 
 [node name="Loading" type="Node"]
 
-[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService", "inputService", "audioService")]
+[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService", "inputService", "audioService", "cursor")]
 script = ExtResource("1_t38ok")
 gameConfig = ExtResource("2_45tyg")
 sceneService = NodePath("../SceneService")
 inputService = NodePath("../InputService")
 audioService = NodePath("../AudioService")
+cursor = NodePath("../Cursor")
 
 [node name="InputService" type="Node2D" parent="."]
 script = ExtResource("2_3cfsu")
@@ -46,3 +49,10 @@ stream = ExtResource("10_0i1vo")
 
 [node name="Cinematic" type="AudioStreamPlayer" parent="AudioService"]
 stream = ExtResource("11_ltu8w")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(970, 569)
+scale = Vector2(1.59375, 1.59375)
+texture = ExtResource("13_cdh1e")
+script = ExtResource("14_yxeox")

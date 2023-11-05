@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddwdu6iolsfet"]
+[gd_scene load_steps=7 format=3 uid="uid://ddwdu6iolsfet"]
 
 [ext_resource type="Script" path="res://Scripts/UI/DayPassedUi.cs" id="1_m718y"]
+[ext_resource type="FontFile" uid="uid://dbnh8a20ef3ni" path="res://OfficeArt/Font/PixelifySans-Regular.ttf" id="2_pqsg1"]
 [ext_resource type="AudioStream" uid="uid://3igovtr75m40" path="res://Audio/end_of_the_day.wav" id="2_r8uu0"]
+[ext_resource type="FontFile" uid="uid://8m5jv3sf6agh" path="res://OfficeArt/Font/Minecraft.ttf" id="3_ba145"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_daf3k"]
+font = ExtResource("2_pqsg1")
 font_size = 176
 
 [sub_resource type="LabelSettings" id="LabelSettings_n6pku"]
+font = ExtResource("3_ba145")
 font_size = 76
 
 [node name="DayPassedUi" type="Control" node_paths=PackedStringArray("daysLeftLabel")]
@@ -26,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0862745, 0.0862745, 0.0862745, 0.784314)
+color = Color(0.054902, 0.054902, 0.054902, 0.784314)
 
 [node name="DayPassed" type="Label" parent="."]
 layout_mode = 1
@@ -35,15 +39,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -522.0
-offset_top = -186.0
-offset_right = 518.0
-offset_bottom = 58.0
+offset_left = -519.0
+offset_top = -184.0
+offset_right = 521.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "DAY PASSED
 "
 label_settings = SubResource("LabelSettings_daf3k")
+horizontal_alignment = 1
 
 [node name="Deadline" type="Label" parent="."]
 layout_mode = 1
@@ -52,12 +57,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -419.5
-offset_top = 63.0
-offset_right = 415.5
-offset_bottom = 171.0
+offset_left = -428.0
+offset_top = 37.0
+offset_right = 407.0
+offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.998383, 1)
 text = "DAYS TILL DEADLINE: 3"
 label_settings = SubResource("LabelSettings_n6pku")
 horizontal_alignment = 1

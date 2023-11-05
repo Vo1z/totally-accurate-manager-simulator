@@ -1,21 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://0i86ip7xbp7o"]
+[gd_scene load_steps=12 format=3 uid="uid://0i86ip7xbp7o"]
 
 [ext_resource type="Script" path="res://Scripts/UI/GameplayUi.cs" id="1_dekvx"]
 [ext_resource type="Texture2D" uid="uid://bn45hrab2te14" path="res://OfficeArt/clock.png" id="2_62gnf"]
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_gdihv"]
 [ext_resource type="AudioStream" uid="uid://d3k7pni02if86" path="res://Audio/alarm.wav" id="4_d1fte"]
+[ext_resource type="FontFile" uid="uid://dbnh8a20ef3ni" path="res://OfficeArt/Font/PixelifySans-Regular.ttf" id="4_et582"]
+[ext_resource type="Texture2D" uid="uid://cjpfqq14cj5qp" path="res://OfficeArt/UI/note_paper.png" id="5_vkak2"]
+[ext_resource type="FontFile" uid="uid://8m5jv3sf6agh" path="res://OfficeArt/Font/Minecraft.ttf" id="7_4ovj7"]
+[ext_resource type="Texture2D" uid="uid://crv3d17xudibj" path="res://OfficeArt/UI/note_paper_2.png" id="7_e28xx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ms6wt"]
+font = ExtResource("4_et582")
 font_size = 44
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dd21q"]
-font_size = 44
+font = ExtResource("4_et582")
+font_size = 45
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_euo40"]
+font = ExtResource("7_4ovj7")
 font_size = 32
 font_color = Color(1, 0, 0.117647, 1)
 
 [node name="UI" type="Control" node_paths=PackedStringArray("projectProgress", "daysLeftLabel", "clockLabel", "alarmSound")]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,17 +41,39 @@ daysLeftLabel = NodePath("DaysLeft")
 clockLabel = NodePath("TextureRect/TimeLeft")
 alarmSound = NodePath("Alarm")
 
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1613.0
+offset_top = 12.0
+offset_right = 1752.0
+offset_bottom = 266.0
+rotation = 1.57079
+texture = ExtResource("7_e28xx")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1613.0
+offset_top = 151.0
+offset_right = 1752.0
+offset_bottom = 437.0
+rotation = 4.71238
+texture = ExtResource("7_e28xx")
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -564.0
+offset_left = -529.0
 offset_top = 29.0
-offset_right = -3.0
+offset_right = -41.0
 offset_bottom = 65.0
 grow_horizontal = 0
 scale = Vector2(0.953197, 0.989469)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_et582")
 max_value = 1.0
 
 [node name="ProjectProgressLabel" type="Label" parent="ProgressBar"]
@@ -49,24 +81,35 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -521.134
+offset_left = -476.46
 offset_top = 44.4683
-offset_right = -42.1343
+offset_right = 2.53976
 offset_bottom = 108.468
 grow_horizontal = 0
-text = "Project progress"
+text = "PROJECT PROGRESS"
 label_settings = SubResource("LabelSettings_ms6wt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 285.0
+offset_top = 2.0
+offset_right = 435.0
+offset_bottom = 280.0
+rotation = 1.57079
+texture = ExtResource("5_vkak2")
+
 [node name="DaysLeft" type="Label" parent="."]
 layout_mode = 1
-offset_left = 22.0
-offset_top = 28.0
-offset_right = 242.0
-offset_bottom = 92.0
-text = "3 Days left"
+offset_left = 17.0
+offset_top = 50.0
+offset_right = 272.0
+offset_bottom = 114.0
+text = "3 DAYS LEFT"
 label_settings = SubResource("LabelSettings_dd21q")
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -81,11 +124,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "12:00"
 label_settings = SubResource("LabelSettings_euo40")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

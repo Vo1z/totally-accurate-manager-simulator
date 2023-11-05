@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs54g6dhv3sf3"]
+[gd_scene load_steps=7 format=3 uid="uid://bs54g6dhv3sf3"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenuUi.cs" id="1_b7qb0"]
 [ext_resource type="AudioStream" uid="uid://bwstm33ipdrxl" path="res://Audio/main_menu_music.mp3" id="2_302mm"]
 [ext_resource type="Texture2D" uid="uid://hplj8hf1nyib" path="res://OfficeArt/UI/intro-office-bg.png" id="2_bhd7i"]
+[ext_resource type="Texture2D" uid="uid://7cywihlw36fe" path="res://OfficeArt/UI/title_bf.png" id="3_3nwca"]
+[ext_resource type="FontFile" uid="uid://dbnh8a20ef3ni" path="res://OfficeArt/Font/PixelifySans-Regular.ttf" id="3_x7lfo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1b6ks"]
+font = ExtResource("3_x7lfo")
+font_size = 101
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -22,35 +32,70 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_bhd7i")
 
-[node name="Play" type="Button" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -749.0
+offset_top = 47.0
+offset_right = 749.0
+offset_bottom = 369.0
+grow_horizontal = 2
+texture = ExtResource("3_3nwca")
+
+[node name="Title" type="Label" parent="TextureRect2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -42.0
-offset_right = 180.0
-offset_bottom = 43.0
+offset_left = -513.5
+offset_top = -125.0
+offset_right = 513.5
+offset_bottom = 125.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "TOTALLY ACCURATE
+MANAGER SIMULATOR"
+label_settings = SubResource("LabelSettings_1b6ks")
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+modulate = Color(0.807843, 0.6, 0.443137, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = 248.0
+offset_right = 195.0
+offset_bottom = 333.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_x7lfo")
 theme_override_font_sizes/font_size = 56
 text = "PLAY"
 
-[node name="Button" type="Button" parent="."]
+[node name="Exit" type="Button" parent="."]
+modulate = Color(0.807843, 0.6, 0.443137, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = 83.0
-offset_right = 180.0
-offset_bottom = 168.0
+offset_left = -165.0
+offset_top = 373.0
+offset_right = 195.0
+offset_bottom = 458.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_x7lfo")
 theme_override_font_sizes/font_size = 56
 text = "EXIT"
 
@@ -59,4 +104,4 @@ stream = ExtResource("2_302mm")
 autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="OnPlayButtonPressed"]
-[connection signal="pressed" from="Button" to="." method="OnExitButtonPressed"]
+[connection signal="pressed" from="Exit" to="." method="OnExitButtonPressed"]

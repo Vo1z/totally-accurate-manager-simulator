@@ -11,6 +11,7 @@ public partial class ResourcePoint : Node2D
 	[Export] private GameConfig gameConfig;
 	[Export] private ResourceType resourceType;
 	
+	[Export] private CpuParticles2D particles;
 	[Export] private ProgressBar progressBar;
 	[Export] private Button speedUpButton;
 	
@@ -42,6 +43,7 @@ public partial class ResourcePoint : Node2D
 
 	private void OnSpeedUpButtonPressed()
 	{
+		particles.Emitting = true;
 		_currentProgress += gameConfig.speedUpValue;
 	}
 	
@@ -51,6 +53,11 @@ public partial class ResourcePoint : Node2D
 			return;
 		
 		worker.OnResourcePointEntered(this);
+	}
+	
+	private void OnParticlesTurnOffTimerTimeout()
+	{
+		particles.Emitting = false;
 	}
 
 	public void SetBusy(Worker worker)

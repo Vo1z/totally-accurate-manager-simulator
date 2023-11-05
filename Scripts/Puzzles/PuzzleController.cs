@@ -67,6 +67,8 @@ public partial class PuzzleController : Control
 	public void ShowMonitor()
 	{
 		_isShown = true;
+		
+		Position = hidePos;
 		_currentTween?.Kill();
 		_currentTween = CreateTween();
 		_currentTween.TweenProperty(this, "modulate", new Color(1f, 1f, 1f, 1f), showHideAnimationDuration);

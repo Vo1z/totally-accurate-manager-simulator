@@ -15,6 +15,7 @@ public partial class GameLoader : Node
 	[Export] private SceneService sceneService;
 	[Export] private InputService inputService;
 	[Export] private AudioService audioService;
+	[Export] private Cursor cursor;
 	
 	public override void _Ready()
 	{
@@ -22,6 +23,7 @@ public partial class GameLoader : Node
 		ServiceLocator.Register(sceneService);
 		ServiceLocator.Register(inputService);
 		ServiceLocator.Register(audioService);
+		ServiceLocator.Register(cursor);
 		ServiceLocator.Register(new ResourcesService(sceneService));
 		ServiceLocator.Register(new GameSessionService(sceneService, gameConfig));
 

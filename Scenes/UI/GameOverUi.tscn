@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0pplsuj0ycwn"]
+[gd_scene load_steps=4 format=3 uid="uid://b0pplsuj0ycwn"]
 
 [ext_resource type="Script" path="res://Scripts/UI/GameOverUi.cs" id="1_02opg"]
+[ext_resource type="FontFile" uid="uid://dbnh8a20ef3ni" path="res://OfficeArt/Font/PixelifySans-Regular.ttf" id="2_de7mk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7rawx"]
+font = ExtResource("2_de7mk")
 font_size = 96
 
 [node name="GameOverUi" type="Control" node_paths=PackedStringArray("resultLabel")]
@@ -24,7 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.784314)
+color = Color(0.054902, 0.054902, 0.054902, 0.784314)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -57,6 +59,7 @@ offset_right = 224.0
 offset_bottom = -136.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_de7mk")
 theme_override_font_sizes/font_size = 66
 text = "CONTINUE"
 

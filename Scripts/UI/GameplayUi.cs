@@ -24,6 +24,8 @@ public partial class GameplayUi : Control
 	{
 		_currentSecondsLeftTillTheEndOfTheDay = gameConfig.dayDuration;
 		_gameSessionService.Value.OnGameProgressChanged += OnGameProgressChanged;
+		
+		OnGameProgressChanged(_gameSessionService.Value.CurrentProjectProgress / (float) _gameSessionService.Value.TargetProjectProgress, _gameSessionService.Value.DaysLeft);
 	}
 
 	public override void _ExitTree()
