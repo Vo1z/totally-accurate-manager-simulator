@@ -15,6 +15,7 @@ public partial class GameplayUi : Control
 	[Export] private Label daysLeftLabel;
 	[Export] private Label clockLabel;
 	[Export] private float progressTweenDuration = 1f;
+	[Export] private AudioStreamPlayer2D alarmSound;
 
 	private Tween _currentTween;
 	private int _currentSecondsLeftTillTheEndOfTheDay = 0;
@@ -34,11 +35,16 @@ public partial class GameplayUi : Control
 	{
 		_currentSecondsLeftTillTheEndOfTheDay--;
 		clockLabel.Text = $"{_currentSecondsLeftTillTheEndOfTheDay / 60:00}:{_currentSecondsLeftTillTheEndOfTheDay % 60:00}";
-		
+
+		if(_currentSecondsLeftTillTheEndOfTheDay == 3)
+		{
+			alarmSound.Play();
+		}
+
 		if(_currentSecondsLeftTillTheEndOfTheDay <= 0)
 			_gameSessionService.Value.SkipDay();
 	}
-	
+
 	private void OnGameProgressChanged(float progress, int daysLeft)
 	{
 		_currentTween?.Kill();

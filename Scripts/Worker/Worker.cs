@@ -16,6 +16,7 @@ public partial class Worker : CharacterBody2D
 	private const float TARGET_POSITION_DELTA = 5f;
 
 	[Export] public WorkerId workerId;
+	[Export] public AudioStreamPlayer2D keyboardPlayer;
 	[Export] private GameConfig gameConfig;
 	[Export] private float walkingSpeed;
 	[Export] private NavigationAgent2D navigationAgent;
@@ -101,6 +102,9 @@ public partial class Worker : CharacterBody2D
 
 	private void OnStateChanged(IState state)
 	{
+		if(state is WorkingState) 
+			keyboardPlayer.Play();
+
 		if(state is ReachingPcState reachingPcState)
 		{
 			uiParent.Show();

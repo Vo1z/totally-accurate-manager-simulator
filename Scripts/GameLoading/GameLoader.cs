@@ -1,4 +1,5 @@
 using Godot;
+using Ingame.Audio;
 using Ingame.GameSession;
 using Ingame.Input;
 using Ingame.Resources;
@@ -13,12 +14,14 @@ public partial class GameLoader : Node
 	[Export] private GameConfig gameConfig;
 	[Export] private SceneService sceneService;
 	[Export] private InputService inputService;
+	[Export] private AudioService audioService;
 	
 	public override void _Ready()
 	{
 		ServiceLocator.Reset();
 		ServiceLocator.Register(sceneService);
 		ServiceLocator.Register(inputService);
+		ServiceLocator.Register(audioService);
 		ServiceLocator.Register(new ResourcesService(sceneService));
 		ServiceLocator.Register(new GameSessionService(sceneService, gameConfig));
 

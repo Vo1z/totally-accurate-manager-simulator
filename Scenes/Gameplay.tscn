@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d2ghxuc7gvlwp"]
+[gd_scene load_steps=31 format=3 uid="uid://d2ghxuc7gvlwp"]
 
 [ext_resource type="Script" path="res://Scripts/CameraWork/MainCamera.cs" id="1_d3cl2"]
 [ext_resource type="Texture2D" uid="uid://bxapihslnlj1g" path="res://OfficeArt/floor.png" id="1_u1bpu"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dnl2sx7j4ne5s" path="res://OfficeArt/tv.png" id="26_k7nvb"]
 [ext_resource type="PackedScene" uid="uid://0i86ip7xbp7o" path="res://Scenes/UI/GameplayUi.tscn" id="27_6x3js"]
 [ext_resource type="PackedScene" uid="uid://c27i5pmpfr2j6" path="res://Scenes/Puzzles/HudComputer.tscn" id="28_gyesr"]
+[ext_resource type="AudioStream" uid="uid://d1fnppl2lfnb8" path="res://Audio/gameplay_music.mp3" id="29_00aam"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qjcge"]
 vertices = PackedVector2Array(1910, 276, 1917, 1065, 1885, 1062, 1884, 1008, 1563, 1010, 1562, 1056, 1506, 1051, 1510, 1010, 1174, 1055, 1080, 1055, 1083, 1005, 1175, 1005, 983, 857, 982, 769, 1090, 774, 1085, 858, 1791, 859, 1786, 772, 1881, 772, 1881, 864, 830, 780, 832, 862, 763, 860, 760, 780, 764, 656, 831, 654, 830, 714, 759, 716, 663, 684, 1651, 774, 1658, 860, 1559, 864, 1569, 773, -5, 309, -6, 273, 166, 275, 104, 314, 169, 337, 100, 376, 294, 377, 286, 343, 1791, 1004, 1788, 916, 1882, 916, 1879, 718, 1878, 629, 1879, 577, 1406, 1000, 1404, 914, 1506, 915, 1164, 771, 1263, 775, 1268, 855, 1172, 858, 345.159, 1064.35, 290, 1065, 295, 788, 388, 787, 542, 786, 545, 1062, 444, 785, 830, 928, 831, 1008, 766, 1007, 767, 926, 976, 276, 1686, 287, 1683, 357, 1294, 364, 992, 312, 1787, 716, 1790, 627, 1800, 277, 1802, 490, 1298, 488, 1561, 579, 1501, 574, 822, 313, 822, 275, 996, 359, 1211, 367, 1211, 488, 285, 224, 698, 220, 700, 489, 367, 675, 294, 620, 448, 673, 176, 1099, -6, 1099, -7, 551, 181, 551, 183, 618, 184, 673, 765, 1075, 664, 1074, 1507, 862, 1404, 859, 1405, 773, 1509, 771, 1565, 631, 1653, 633, 1656, 717, 1569, 722, 1514, 716, 980, 997, 984, 921, 1081, 917, 1408, 712, 1408, 632, 1502, 627, 1267, 714, 1161, 724, 1086, 724, 983, 714, 982, 630, 1097, 624, 1173, 625, 1266, 631, 1175, 912, 1267, 918, 1265, 999, 1565, 913, 1654, 915, 1656, 1000, 1171, 580, 1095, 575, 763, 571)
@@ -2762,3 +2763,8 @@ scale = Vector2(0.961039, 0.998433)
 workerId = 3
 
 [node name="HudComputer" parent="." instance=ExtResource("28_gyesr")]
+
+[node name="GameplayMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_00aam")
+volume_db = -10.0
+autoplay = true

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://0i86ip7xbp7o"]
+[gd_scene load_steps=8 format=3 uid="uid://0i86ip7xbp7o"]
 
 [ext_resource type="Script" path="res://Scripts/UI/GameplayUi.cs" id="1_dekvx"]
 [ext_resource type="Texture2D" uid="uid://bn45hrab2te14" path="res://OfficeArt/clock.png" id="2_62gnf"]
 [ext_resource type="Resource" uid="uid://com0vc2egetnf" path="res://GameConfig.tres" id="2_gdihv"]
+[ext_resource type="AudioStream" uid="uid://d3k7pni02if86" path="res://Audio/alarm.wav" id="4_d1fte"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ms6wt"]
 font_size = 44
@@ -14,7 +15,7 @@ font_size = 44
 font_size = 32
 font_color = Color(1, 0, 0.117647, 1)
 
-[node name="UI" type="Control" node_paths=PackedStringArray("projectProgress", "daysLeftLabel", "clockLabel")]
+[node name="UI" type="Control" node_paths=PackedStringArray("projectProgress", "daysLeftLabel", "clockLabel", "alarmSound")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,6 +29,7 @@ gameConfig = ExtResource("2_gdihv")
 projectProgress = NodePath("ProgressBar")
 daysLeftLabel = NodePath("DaysLeft")
 clockLabel = NodePath("TextureRect/TimeLeft")
+alarmSound = NodePath("Alarm")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
@@ -87,5 +89,8 @@ horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Alarm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_d1fte")
 
 [connection signal="timeout" from="Timer" to="." method="OnTimerTick"]

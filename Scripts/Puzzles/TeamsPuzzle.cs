@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Ingame.Audio;
 using Ingame.GameSession;
 using Ingame.Service;
 using Ingame.Utils;
@@ -17,8 +18,12 @@ public partial class TeamsPuzzle : TextureRect
 	[Export] private Texture2D bossTexture;
 	[Export] private Texture2D juniorTexture;
 	[Export] private Texture2D catTexture;
+	
+	[ExportCategory("Audio")]
+	[Export] private AudioStreamPlayer teamsCallSound;
 
 	private readonly Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
+	private readonly Lazy<AudioService> _audioService = new(ServiceLocator.Get<AudioService>);
 	
 	private Caller? _currentCaller;
 	
@@ -26,10 +31,11 @@ public partial class TeamsPuzzle : TextureRect
 	{
 		GD.Print("Teams puzzle started");
 		var caller = RndUtils.RandomEnumValue<Caller>();
-		GD.Print($"Caller: {caller}");
 		var callerTexture = GetCallerTexture(caller);
 		string callerName = GetCallerName(caller);
 
+		teamsCallSound.Play();
+		
 		_currentCaller = caller;
 		callerAvatarTextureRect.Texture = callerTexture;
 		callerNameLabel.Text = callerName;
@@ -37,6 +43,8 @@ public partial class TeamsPuzzle : TextureRect
 	
 	private void OnAcceptPressed()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
+		teamsCallSound.Stop();
 		puzzleController.HideMonitor();
 		puzzleController.ResetPuzzleTimer();
 		
@@ -49,6 +57,8 @@ public partial class TeamsPuzzle : TextureRect
 	
 	private void OnDeclinePressed()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
+		teamsCallSound.Stop();
 		puzzleController.ResetPuzzleTimer();
 		puzzleController.HideMonitor();
 		

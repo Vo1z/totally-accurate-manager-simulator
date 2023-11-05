@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Ingame.Audio;
 using Ingame.GameSession;
 using Ingame.Service;
 using Ingame.Utils;
@@ -13,6 +14,7 @@ public partial class KicelPuzzle : TextureRect
 	[Export] private TextEdit answer;
 
 	private readonly Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
+	private readonly Lazy<AudioService> _audioService = new(ServiceLocator.Get<AudioService>);
 	
 	private int _currentCorrectResult;
 	
@@ -38,6 +40,7 @@ public partial class KicelPuzzle : TextureRect
 
 	private void OnSubmitButtonPressed()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		puzzleController.ResetPuzzleTimer();
 		puzzleController.HideMonitor();
 		

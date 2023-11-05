@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://kfk57lbnt744"]
+[gd_scene load_steps=11 format=3 uid="uid://kfk57lbnt744"]
 
 [ext_resource type="Script" path="res://Scripts/GameLoading/GameLoader.cs" id="1_t38ok"]
 [ext_resource type="Script" path="res://Scripts/Input/InputService.cs" id="2_3cfsu"]
@@ -8,14 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://bs54g6dhv3sf3" path="res://Scenes/UI/MainMenuUi.tscn" id="5_17h06"]
 [ext_resource type="PackedScene" uid="uid://ddwdu6iolsfet" path="res://Scenes/UI/DayPassedUi.tscn" id="6_jubv6"]
 [ext_resource type="PackedScene" uid="uid://b0pplsuj0ycwn" path="res://Scenes/UI/GameOverUi.tscn" id="8_mt5xw"]
+[ext_resource type="Script" path="res://Scripts/Audio/AudioService.cs" id="9_55hb4"]
+[ext_resource type="AudioStream" uid="uid://dkb3fq8o6sp3k" path="res://Audio/ui_click.wav" id="10_0i1vo"]
 
 [node name="Loading" type="Node"]
 
-[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService", "inputService")]
+[node name="GameLoader" type="Node2D" parent="." node_paths=PackedStringArray("sceneService", "inputService", "audioService")]
 script = ExtResource("1_t38ok")
 gameConfig = ExtResource("2_45tyg")
 sceneService = NodePath("../SceneService")
 inputService = NodePath("../InputService")
+audioService = NodePath("../AudioService")
 
 [node name="InputService" type="Node2D" parent="."]
 script = ExtResource("2_3cfsu")
@@ -29,3 +32,10 @@ gameOverScene = ExtResource("8_mt5xw")
 sceneRoot = NodePath("../SceneRoot")
 
 [node name="SceneRoot" type="Node" parent="."]
+
+[node name="AudioService" type="Node" parent="." node_paths=PackedStringArray("uiClick")]
+script = ExtResource("9_55hb4")
+uiClick = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioService"]
+stream = ExtResource("10_0i1vo")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bct3kqqns55qs"]
+[gd_scene load_steps=17 format=3 uid="uid://bct3kqqns55qs"]
 
 [ext_resource type="Texture2D" uid="uid://bvpkhturxvojr" path="res://Characters/characters.png" id="1_q26xa"]
 [ext_resource type="Script" path="res://Scripts/Worker/Worker.cs" id="1_s7o4q"]
@@ -6,6 +6,7 @@
 [ext_resource type="Shader" path="res://Scripts/Shaders/Worker.gdshader" id="3_8yx7c"]
 [ext_resource type="Texture2D" uid="uid://c3fxcewqkmrwe" path="res://OfficeArt/paper.png" id="4_0bxd3"]
 [ext_resource type="Texture2D" uid="uid://37uqq66y6m0" path="res://OfficeArt/water-cooler.png" id="5_u1oxi"]
+[ext_resource type="AudioStream" uid="uid://i33n37pnwi26" path="res://Audio/keyboard.mp3" id="5_u72s3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xstqa"]
 resource_local_to_scene = true
@@ -125,11 +126,12 @@ _data = {
 "walk_top": SubResource("Animation_x0xsw")
 }
 
-[node name="Worker" type="CharacterBody2D" node_paths=PackedStringArray("navigationAgent", "animationPlayer", "resourceIcon", "uiParent", "workerSprite")]
+[node name="Worker" type="CharacterBody2D" node_paths=PackedStringArray("keyboardPlayer", "navigationAgent", "animationPlayer", "resourceIcon", "uiParent", "workerSprite")]
 collision_mask = 0
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_s7o4q")
+keyboardPlayer = NodePath("AudioStreamPlayer2D")
 gameConfig = ExtResource("2_ulglj")
 walkingSpeed = 200.0
 navigationAgent = NodePath("NavigationAgent2D")
@@ -158,6 +160,9 @@ libraries = {
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 debug_enabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_u72s3")
 
 [node name="UI" type="Node2D" parent="."]
 z_index = 10

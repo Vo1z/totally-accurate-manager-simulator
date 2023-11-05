@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddwdu6iolsfet"]
+[gd_scene load_steps=5 format=3 uid="uid://ddwdu6iolsfet"]
 
 [ext_resource type="Script" path="res://Scripts/UI/DayPassedUi.cs" id="1_m718y"]
+[ext_resource type="AudioStream" uid="uid://3igovtr75m40" path="res://Audio/end_of_the_day.wav" id="2_r8uu0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_daf3k"]
 font_size = 176
@@ -62,8 +63,12 @@ label_settings = SubResource("LabelSettings_n6pku")
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_r8uu0")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="OnScreenTimeTimeout"]

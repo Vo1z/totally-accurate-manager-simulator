@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using Ingame.Audio;
 using Ingame.GameSession;
 using Ingame.Service;
 using Ingame.Utils;
@@ -15,6 +16,7 @@ public partial class BabchaPuzzle : TextureRect
 	[Export] private Button[] buttons;
 
 	private readonly Lazy<GameSessionService> _gameSessionService = new(ServiceLocator.Get<GameSessionService>);
+	private readonly Lazy<AudioService> _audioService = new(ServiceLocator.Get<AudioService>);
 	
 	private int _currentExpectedInput;
 
@@ -52,54 +54,63 @@ public partial class BabchaPuzzle : TextureRect
 
 	private void OnButtonPressed1()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[0].Disabled = true;
 		Evaluate(1);
 	}
 
 	private void OnButtonPressed2()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[1].Disabled = true;
 		Evaluate(2);
 	}
 
 	private void OnButtonPressed3()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[2].Disabled = true;
 		Evaluate(3);
 	}
 
 	private void OnButtonPressed4()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[3].Disabled = true;
 		Evaluate(4);
 	}
 	
 	private void OnButtonPressed5()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[4].Disabled = true;
 		Evaluate(5);
 	}
 	
 	private void OnButtonPressed6()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[5].Disabled = true;
 		Evaluate(6);
 	}
 	
 	private void OnButtonPressed7()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[6].Disabled = true;
 		Evaluate(7);
 	}
 	
 	private void OnButtonPressed8()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[7].Disabled = true;
 		Evaluate(8);
 	}
 	
 	private void OnButtonPressed9()
 	{
+		_audioService.Value.PlaySound(AudioClip.UiClick);
 		buttons[8].Disabled = true;
 		Evaluate(9);
 	}
